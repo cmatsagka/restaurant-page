@@ -9,28 +9,29 @@ const menuBtn = document.querySelector('#menu-btn');
 const aboutBtn = document.querySelector('#about-btn');
 const contactBtn = document.querySelector('#contact-btn');
 
-
+function updateContent(loadFunction) {
+    content.innerHTML = "";
+    loadFunction();
+}
 
 homeBtn.addEventListener('click', () => {
     console.log('Home clicked');
-    content.innerHTML = "";
-    loadPage();
+    updateContent(loadPage);
 });
 
 menuBtn.addEventListener('click', () => {
     console.log('Menu clicked');
-    content.innerHTML = "";
-    loadMenu();
+    updateContent(loadMenu);
 });
 
 aboutBtn.addEventListener('click', () => {
     console.log('about clicked');
-    content.innerHTML = "";
+    // updateContent();
 });
 
 contactBtn.addEventListener('click', () => {
     console.log('contact clicked');
-    content.innerHTML = "";
+    // updateContent();
 });
 
 loadPage();
