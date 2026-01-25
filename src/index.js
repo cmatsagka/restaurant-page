@@ -8,8 +8,12 @@ const menuBtn = document.querySelector('#menu-btn');
 const aboutBtn = document.querySelector('#about-btn');
 const contactBtn = document.querySelector('#contact-btn');
 
+content.innerHTML = "";
+
 homeBtn.addEventListener('click', () => {
     console.log('Home clicked');
+
+    loadPage();
 });
 
 menuBtn.addEventListener('click', () => {
@@ -24,4 +28,3 @@ contactBtn.addEventListener('click', () => {
     console.log('contact clicked');
 });
 
-loadPage();
