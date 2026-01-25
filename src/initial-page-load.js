@@ -14,5 +14,5 @@ export function loadPage() {
     const image = document.createElement('img');
     image.src = restaurantLogo;
 
-    document.body.appendChild(image);
+    content.appendChild(image);
 }
