@@ -19,5 +19,4 @@ export function loadMenu() {
     const description = document.createElement('p');
     description.textContent = "Menu items list";
     content.appendChild(description);
-
 }

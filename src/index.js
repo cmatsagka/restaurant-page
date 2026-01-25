@@ -1,6 +1,8 @@
 import './styles.css';
 import { loadPage } from './initial-page-load.js';
 import { loadMenu } from './menu.js';
+import { loadAbout } from './about.js';
+import { loadContact } from './contact.js';
 
 const content = document.querySelector('#content');
 
@@ -26,12 +28,12 @@ menuBtn.addEventListener('click', () => {
 
 aboutBtn.addEventListener('click', () => {
     console.log('about clicked');
-    // updateContent();
+    updateContent(loadAbout);
 });
 
 contactBtn.addEventListener('click', () => {
     console.log('contact clicked');
-    // updateContent();
+    updateContent(loadContact);
 });
 
 loadPage();
