@@ -13,6 +13,6 @@ export function loadPage() {
 
     const image = document.createElement('img');
     image.src = restaurantLogo;
-
+    image.alt = "Zoumi Bistro logo";
     content.appendChild(image);
 }
