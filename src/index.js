@@ -13,26 +13,23 @@ const contactBtn = document.querySelector('#contact-btn');
 
 function updateContent(loadFunction) {
     content.innerHTML = "";
+    content.className = "";
     loadFunction();
 }
 
 homeBtn.addEventListener('click', () => {
-    console.log('Home clicked');
     updateContent(loadPage);
 });
 
 menuBtn.addEventListener('click', () => {
-    console.log('Menu clicked');
     updateContent(loadMenu);
 });
 
 aboutBtn.addEventListener('click', () => {
-    console.log('about clicked');
     updateContent(loadAbout);
 });
 
 contactBtn.addEventListener('click', () => {
-    console.log('contact clicked');
     updateContent(loadContact);
 });
 

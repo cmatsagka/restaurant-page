@@ -8,6 +8,7 @@ const menuItems = [
 
 export function loadMenu() {
     const content = document.querySelector('#content');
+    content.classList.add('menu-page');
 
     const restaurantName = document.createElement('h2');
     restaurantName.textContent = "Zoumi";

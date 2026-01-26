@@ -2,6 +2,7 @@ import restaurantLogo from './assets/restaurant.png';
 
 export function loadContact() {
     const content = document.querySelector('#content');
+    content.classList.add('contact-page');
 
     const restaurantName = document.createElement('h2');
     restaurantName.textContent = "Zoumi";

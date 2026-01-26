@@ -2,6 +2,7 @@ import restaurantLogo from './assets/restaurant.png';
 
 export function loadPage() {
     const content = document.querySelector('#content');
+    content.classList.add('home-page');
 
     const headline = document.createElement('h1');
     headline.textContent = "Zoumi";
