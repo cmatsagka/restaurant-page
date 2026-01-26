@@ -30,7 +30,7 @@ export function loadMenu() {
     
     for (let i = 0; i < menuItems.length; i++) {
         const listItem = document.createElement('li');
-        listItem.textContent = menuItems[i].name + " " + menuItems[i].price + " " + menuItems[i].description;
+        listItem.textContent = `${menuItems[i].name} - ${menuItems[i].price}: ${menuItems[i].description}`;
         list.appendChild(listItem);
     }
     content.appendChild(list);
