@@ -1,5 +1,11 @@
 import restaurantLogo from './assets/restaurant.png';
 
+const menuItems = [
+    { name: "Local Sourdough", price: "€5", description: "Served with salted butter." },
+    { name: "Roasted Carrots", price: "€12", description: "Honey glazed with thyme." },
+    { name: "Bistro Burger", price: "€18", description: "Local beef with secret sauce." },
+];
+
 export function loadMenu() {
     const content = document.querySelector('#content');
 
