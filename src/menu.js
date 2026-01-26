@@ -28,9 +28,9 @@ export function loadMenu() {
 
     const list = document.createElement('ul');
     
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < menuItems.length; i++) {
         const listItem = document.createElement('li');
-        listItem.textContent = `Item ${i}`;
+        listItem.textContent = menuItems[i].name + " " + menuItems[i].price + " " + menuItems[i].description;
         list.appendChild(listItem);
     }
     content.appendChild(list);
