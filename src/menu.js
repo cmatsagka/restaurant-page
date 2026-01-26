@@ -32,13 +32,13 @@ export function loadMenu() {
         const listItem = document.createElement('li');
 
         const itemName = document.createElement('h3');
-        itemName.textContent = `${menuItems[i].name}`;
+        itemName.textContent = menuItems[i].name;
 
-        const itemPrice = document.createElement('p');
-        itemPrice.textContent = `${menuItems[i].price}`;
+        const itemPrice = document.createElement('span');
+        itemPrice.textContent = menuItems[i].price;
 
         const itemDescription= document.createElement('p');
-        itemDescription.textContent = `${menuItems[i].description}`;
+        itemDescription.textContent = menuItems[i].description;
 
         listItem.appendChild(itemName);
         listItem.appendChild(itemPrice);
