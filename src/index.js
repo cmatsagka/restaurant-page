@@ -12,25 +12,25 @@ const aboutBtn = document.querySelector('#about-btn');
 const contactBtn = document.querySelector('#contact-btn');
 
 function updateContent(loadFunction) {
-    content.innerHTML = "";
-    content.className = "";
-    loadFunction();
+	content.innerHTML = '';
+	content.className = '';
+	loadFunction();
 }
 
 homeBtn.addEventListener('click', () => {
-    updateContent(loadPage);
+	updateContent(loadPage);
 });
 
 menuBtn.addEventListener('click', () => {
-    updateContent(loadMenu);
+	updateContent(loadMenu);
 });
 
 aboutBtn.addEventListener('click', () => {
-    updateContent(loadAbout);
+	updateContent(loadAbout);
 });
 
 contactBtn.addEventListener('click', () => {
-    updateContent(loadContact);
+	updateContent(loadContact);
 });
 
 loadPage();
