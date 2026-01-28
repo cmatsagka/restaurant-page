@@ -31,14 +31,14 @@ body {
 
 button {
 	background-color: hsl(16, 100%, 86%);
-	color: hsl(16, 100%, 46%);
+	color: hsl(16, 100%, 25%);
 	padding: 0.6rem 0.8rem;
 	border-radius: 12px;
 	border: none;
 }
 
 button:hover {
-	background-color: hsl(16, 100%, 46%);
+	background-color: hsl(16, 100%, 45%);
 	color: hsl(16, 100%, 86%);
 }
 
@@ -86,9 +86,14 @@ button:active {
 	width: clamp(150px, 20vw, 300px);
 }
 
-.home-desrcription {
+.home-description {
 	max-width: 40ch;
 	font-size: 1.2rem;
 	color: hsl(16, 100%, 25%);
 	line-height: 1.6;
+}
+
+.menu-page {
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
 }
