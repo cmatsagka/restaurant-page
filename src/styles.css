@@ -65,6 +65,9 @@ button:active {
 }
 
 .home-page h1 {
-	font-size: 6rem;
+	font-size: clamp(3rem, 8vw + 1rem, 6rem);
 	font-weight: 900;
+	text-align: center;
+	line-height: 1.1;
+	color: hsl(16, 100%, 20%);
 }
