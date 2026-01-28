@@ -7,6 +7,9 @@
 body {
 	background-color: hsl(16, 100%, 66%);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 button {
@@ -38,5 +41,4 @@ button:hover {
 	justify-content: center;
 	align-items: center;
 	flex: 1;
-	min-height: 100vh;
 }
