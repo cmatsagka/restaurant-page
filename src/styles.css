@@ -17,6 +17,11 @@ button {
 	border: none;
 }
 
+button:hover {
+	background-color: hsl(16, 100%, 46%);
+	color: hsl(16, 100%, 86%);
+}
+
 #content {
 	max-width: 1000px;
 	margin: 0 auto;
