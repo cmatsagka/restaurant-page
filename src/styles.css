@@ -4,6 +4,23 @@
 	box-sizing: border-box;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+}
+
 body {
 	background-color: hsl(16, 100%, 66%);
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
