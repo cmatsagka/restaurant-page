@@ -46,3 +46,8 @@ button:active {
 	align-items: center;
 	flex: 1;
 }
+
+.home-page h1 {
+	font-size: 6rem;
+	font-weight: 900;
+}
