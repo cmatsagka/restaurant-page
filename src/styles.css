@@ -13,3 +13,10 @@ body {
 	max-width: 1000px;
 	margin: 0 auto;
 }
+
+#menu-navigation {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.8rem;
+	padding: 1rem;
+}
