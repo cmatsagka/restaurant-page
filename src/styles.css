@@ -85,3 +85,10 @@ button:active {
 .home-logo {
 	width: clamp(150px, 20vw, 300px);
 }
+
+.home-desrcription {
+	max-width: 40ch;
+	font-size: 1.2rem;
+	color: hsl(16, 100%, 25%);
+	line-height: 1.6;
+}
