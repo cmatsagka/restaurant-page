@@ -60,6 +60,14 @@ button:active {
 	padding: 2rem;
 }
 
+.home-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
 .home-page h1 {
 	font-size: clamp(3rem, 8vw + 1rem, 6rem);
 	font-weight: 900;
