@@ -81,3 +81,7 @@ button:active {
 	line-height: 1.1;
 	color: hsl(16, 100%, 20%);
 }
+
+.home-logo {
+	width: clamp(150px, 20vw, 300px);
+}
