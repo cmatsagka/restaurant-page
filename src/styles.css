@@ -25,6 +25,10 @@ button:hover {
 	color: hsl(16, 100%, 86%);
 }
 
+button:active {
+	transform: scale(0.95);
+}
+
 #menu-navigation {
 	display: flex;
 	justify-content: flex-end;
