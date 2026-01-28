@@ -22,16 +22,20 @@ export function loadMenu() {
 	const content = document.querySelector('#content');
 	content.classList.add('menu-page');
 
+	const logoName = document.createElement('div');
+	logoName.classList.add('logo-name');
+	content.appendChild(logoName);
+
 	const restaurantName = document.createElement('h2');
 	restaurantName.textContent = 'Zoumi';
 	restaurantName.classList.add('restaurant-name');
-	content.appendChild(restaurantName);
+	logoName.appendChild(restaurantName);
 
 	const image = document.createElement('img');
 	image.src = restaurantLogo;
 	image.alt = 'Zoumi Bistro logo';
 	image.classList.add('logo-small');
-	content.appendChild(image);
+	logoName.appendChild(image);
 
 	const headline = document.createElement('h1');
 	headline.textContent = 'Menu';
