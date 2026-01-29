@@ -96,20 +96,21 @@ button:active {
 .menu-page {
 	display: grid;
 	grid-template-columns: 1fr 200px 1fr;
+	justify-content: center;
+	align-items: center;
 	gap: 2rem;
 }
 
-.logo-small {
-	grid-column: 2;
-	grid-row: 1;
-	width: 100%;
+.page-title {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
 }
 
-.page-title {
-	grid-column: 2;
-	grid-row: 2;
+.logo-name {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
 }
 
 .menu {
-	grid-column: 1 / span 3;
+	grid-column: 1 / -1;
 }
