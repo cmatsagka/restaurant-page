@@ -35,6 +35,7 @@ button {
 	padding: 0.6rem 0.8rem;
 	border-radius: 12px;
 	border: none;
+	cursor: pointer;
 }
 
 button:hover {
@@ -44,6 +45,17 @@ button:hover {
 
 button:active {
 	transform: scale(0.95);
+}
+
+button.active {
+	background-color: hsl(16, 100%, 25%);
+	color: hsl(16, 100%, 86%);
+	box-shadow: inset 0 2px 4px hsl(0, 0%, 0%, 0.2);
+	cursor: default;
+}
+
+button.active:active {
+	transform: none;
 }
 
 #menu-navigation {
