@@ -42,11 +42,6 @@ export function loadMenu() {
 	headline.classList.add('page-title');
 	content.appendChild(headline);
 
-	const description = document.createElement('p');
-	description.textContent = 'Menu items list';
-	description.classList.add('page-descr');
-	content.appendChild(description);
-
 	const list = document.createElement('ul');
 	list.classList.add('menu');
 
