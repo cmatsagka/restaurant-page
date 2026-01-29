@@ -65,5 +65,6 @@ export function loadMenu() {
 
 		list.appendChild(listItem);
 	}
+
 	content.appendChild(list);
 }

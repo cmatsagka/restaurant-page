@@ -10,8 +10,7 @@ export function loadPage() {
 	content.appendChild(headline);
 
 	const description = document.createElement('p');
-	description.textContent =
-		'A modern bistro based on quality local products.';
+	description.textContent = `Boldly plant-based. Deeply Athenian. We extract the essence of the Greek seasons into every juicy bite.`;
 	description.classList.add('home-description');
 	content.appendChild(description);
 
