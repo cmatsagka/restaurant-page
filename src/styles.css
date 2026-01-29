@@ -112,9 +112,7 @@ button:active {
 }
 
 .menu-item {
-	background-color: hsl(16, 100%, 86%);
 	padding: 1.5rem;
-	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
