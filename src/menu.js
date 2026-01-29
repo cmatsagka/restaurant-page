@@ -3,18 +3,45 @@ import restaurantLogo from './assets/restaurant.png';
 const menuItems = [
 	{
 		name: 'Local Sourdough',
-		price: '€5',
+		price: '€2',
 		description: 'Served with salted butter.',
 	},
 	{
-		name: 'Roasted Carrots',
-		price: '€12',
-		description: 'Honey glazed with thyme.',
+		name: 'Crunchy potatoes',
+		price: '€5',
+		description: 'Crispy potatoes with galotyri on the side.',
 	},
 	{
-		name: 'Bistro Burger',
-		price: '€18',
-		description: 'Local beef with secret sauce.',
+		name: 'Twisted Choriatiki',
+		price: '€7',
+		description: 'Myzithra, koulouri, cherry tomato, cucumber, ruccola.',
+	},
+	{
+		name: 'Burratamas',
+		price: '€7',
+		description:
+			'Burrata, basil oil, garlic oil, sundried tomato sauce and homemade breadsticks.',
+	},
+	{
+		name: 'Gorgonziola',
+		price: '€12',
+		description: 'Pasta with zuccini, onion, gorgonziola and local wine.',
+	},
+	{
+		name: 'Tsiprela',
+		price: '€11',
+		description: 'Pasta with tsipouro, tomato and creme in clay pot.',
+	},
+	{
+		name: 'Krithariera',
+		price: '€9',
+		description: 'Orzo with burned leek and sauce from spiced graviera.',
+	},
+	{
+		name: 'Mush burger',
+		price: '€12',
+		description:
+			'Vegetarian burger with fried oyster mushrooms and fried potatoes.',
 	},
 ];
 
