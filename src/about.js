@@ -28,13 +28,19 @@ export function loadAbout() {
 	storyContainer.classList.add('about-txt-container');
 
 	const p1 = document.createElement('p');
-	p1.textContent = 'A modern bistro based on quality local products.';
+	p1.textContent = `In the heart of Athens, "Zoumi" (Ζουμί) stands for more than just juice. 
+	It is a tribute to the intensity of Greek nature. We set out to prove that vegetarian 
+	cuisine doesn't just nourish—it overflows with flavor.`;
 
 	const p2 = document.createElement('p');
-	p2.textContent = 'A modern bistro based on quality local products.';
+	p2.textContent = `From the volcanic soil of Santorini to the wild herbs of 
+    Mt. Parnitha, we source exclusively from local Greek producers. By focusing 
+    on seasonal vegetables, slow-reduction broths, and cold-pressed oils, we 
+    extract the "zoumi" out of every ingredient to create dishes that are bold, 
+    vibrant, and unapologetically juicy.`;
 
 	const quote = document.createElement('blockquote');
-	quote.textContent = 'A modern bistro based on quality local products.';
+	quote.textContent = `“If it's not juicy, it's not Zoumi.”`;
 
 	storyContainer.appendChild(p1);
 	storyContainer.appendChild(quote);
