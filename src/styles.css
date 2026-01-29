@@ -149,6 +149,10 @@ button:active {
 	text-align: left;
 }
 
+.page-title {
+	text-align: center;
+}
+
 .about-txt-container p {
 	line-height: 1.8;
 	color: hsl(16, 100%, 15%);
