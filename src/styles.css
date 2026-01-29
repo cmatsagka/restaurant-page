@@ -141,7 +141,8 @@ button:active {
 	color: hsl(16, 100%, 25%);
 }
 
-.about-txt-container {
+.about-txt-container,
+.contact-container {
 	display: flex;
 	flex-direction: column;
 	max-width: 65ch;
@@ -153,7 +154,8 @@ button:active {
 	text-align: center;
 }
 
-.about-txt-container p {
+.about-txt-container p,
+.contact-container p {
 	line-height: 1.8;
 	color: hsl(16, 100%, 15%);
 	font-size: 1.1rem;
