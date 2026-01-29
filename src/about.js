@@ -16,13 +16,25 @@ export function loadAbout() {
 	content.appendChild(image);
 
 	const headline = document.createElement('h1');
-	headline.textContent = 'About';
+	headline.textContent = 'Our story';
 	headline.classList.add('page-title');
 	content.appendChild(headline);
 
-	const description = document.createElement('p');
-	description.textContent =
-		'A modern bistro based on quality local products.';
-	description.classList.add('page-descr');
-	content.appendChild(description);
+	const storyContainer = document.createElement('div');
+	storyContainer.classList.add('about-txt-container');
+
+	const p1 = document.createElement('p');
+	p1.textContent = 'A modern bistro based on quality local products.';
+
+	const p2 = document.createElement('p');
+	p2.textContent = 'A modern bistro based on quality local products.';
+
+	const quote = document.createElement('p');
+	quote.textContent = 'A modern bistro based on quality local products.';
+
+	storyContainer.appendChild(p1);
+	storyContainer.appendChild(quote);
+	storyContainer.appendChild(p2);
+
+	content.appendChild(storyContainer);
 }
