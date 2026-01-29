@@ -122,23 +122,31 @@ button:active {
 	width: 100%;
 }
 
+.menu-item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+	margin-bottom: 0.2rem;
+}
+
+.menu-item h3 {
+	font-size: 1.2rem;
+	color: hsl(16, 100%, 20%);
+}
+
+.item-price {
+	font-size: 1rem;
+	font-weight: 700;
+	color: hsl(16, 100%, 30%);
+	white-space: nowrap;
+}
+
 .menu-item {
 	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-}
-
-.menu-item h3 {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.item-price {
-	font-size: 1rem;
-	font-weight: 400;
-	color: hsl(16, 100%, 25%);
 }
 
 .about-txt-container,
