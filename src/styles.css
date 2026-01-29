@@ -95,9 +95,6 @@ button:active {
 
 .menu-page {
 	display: grid;
-	grid-template-columns: 2fr 1fr 2fr;
-	grid-template-areas:
-		'menu logo-name menu'
-		'menu page-title menu'
-		'menu . menu';
+	grid-template-columns: 1fr 200px 1fr;
+	gap: 2rem;
 }
