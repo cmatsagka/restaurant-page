@@ -44,5 +44,26 @@ export function loadContact() {
 		return section;
 	}
 
+	infoContainer.appendChild(
+		createContactSection('Find Us', [
+			'123 Sourdough Lane, Bread District',
+			'Athens, Greece',
+		])
+	);
+
+	infoContainer.appendChild(
+		createContactSection('Opening Hours', [
+			'Mon - Thu: 12:00 - 00:00',
+			'Fri - Sun: 12:00 - 02:00',
+		])
+	);
+
+	infoContainer.appendChild(
+		createContactSection('Reservations', [
+			'+30 1234567891',
+			'hello@zoumi-bistro.com',
+		])
+	);
+
 	content.appendChild(infoContainer);
 }
