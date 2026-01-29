@@ -11,26 +11,36 @@ const menuBtn = document.querySelector('#menu-btn');
 const aboutBtn = document.querySelector('#about-btn');
 const contactBtn = document.querySelector('#contact-btn');
 
-function updateContent(loadFunction) {
+function setActiveButton(activeBtn) {
+	const buttons = document.querySelectorAll('button');
+	buttons.forEach((btn) => btn.classList.remove('active'));
+	activeBtn.classList.add('active');
+}
+
+function updateContent(loadFunction, clickedBtn) {
 	content.innerHTML = '';
 	content.className = '';
 	loadFunction();
+	if (clickedBtn) {
+		setActiveButton(clickedBtn);
+	}
 }
 
 homeBtn.addEventListener('click', () => {
-	updateContent(loadPage);
+	updateContent(loadPage, homeBtn);
 });
 
 menuBtn.addEventListener('click', () => {
-	updateContent(loadMenu);
+	updateContent(loadMenu, menuBtn);
 });
 
 aboutBtn.addEventListener('click', () => {
-	updateContent(loadAbout);
+	updateContent(loadAbout, aboutBtn);
 });
 
 contactBtn.addEventListener('click', () => {
-	updateContent(loadContact);
+	updateContent(loadContact, contactBtn);
 });
 
 loadPage();
+setActiveButton(homeBtn);
