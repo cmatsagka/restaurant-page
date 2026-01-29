@@ -6,7 +6,7 @@ export function loadPage() {
 
 	const headline = document.createElement('h1');
 	headline.textContent = 'Zoumi';
-	headline.classList.add('home-title');
+	headline.classList.add('restaurant-name');
 	content.appendChild(headline);
 
 	const description = document.createElement('p');
