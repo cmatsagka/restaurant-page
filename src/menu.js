@@ -4,12 +4,17 @@ const menuItems = [
 	{
 		name: 'Local Sourdough',
 		price: '€2',
-		description: 'Served with salted butter.',
+		description: 'Served with extra virgin oil and tomato.',
 	},
 	{
 		name: 'Crunchy potatoes',
 		price: '€5',
 		description: 'Crispy potatoes with galotyri on the side.',
+	},
+	{
+		name: 'Cheese plate',
+		price: '€8',
+		description: 'Local cheese mystery plate.',
 	},
 	{
 		name: 'Twisted Choriatiki',
@@ -23,14 +28,20 @@ const menuItems = [
 			'Burrata, basil oil, garlic oil, sun-dried tomato sauce and homemade breadsticks.',
 	},
 	{
+		name: 'Kagianato',
+		price: '€8',
+		description: `Scrambled eggs with tomato sauce and nivato cheese`,
+	},
+	{
 		name: 'Gorgonzola',
 		price: '€12',
-		description: 'Pasta with zucchini, onion, gorgonzola and local wine.',
+		description:
+			'Pasta with zucchini, onion, gorgonzola and local wine sauce.',
 	},
 	{
 		name: 'Tsiprela',
 		price: '€11',
-		description: 'Pasta with tsipouro, tomato and creme in clay pot.',
+		description: 'Pasta with tsipouro, tomato and creme sauce in clay pot.',
 	},
 	{
 		name: 'Krithariera',
@@ -40,8 +51,17 @@ const menuItems = [
 	{
 		name: 'Mush burger',
 		price: '€12',
-		description:
-			'Vegetarian burger with fried oyster mushrooms and fried potatoes.',
+		description: `Vegetarian burger with fried oyster mushrooms, aged cheddar, homemade cucumber pickle, 'zoumi' homemade sauce and fried potatoes on the side.`,
+	},
+	{
+		name: 'Galaktompoureko',
+		price: '€6',
+		description: `Traditionally crunchy with juicy syrup`,
+	},
+	{
+		name: 'Banoffee',
+		price: '€6',
+		description: `Biscuit, salty caramel, whipped cream, banana and chocolate`,
 	},
 ];
 
