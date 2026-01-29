@@ -94,21 +94,10 @@ button:active {
 }
 
 .menu-page {
-	display: grid;
-	grid-template-columns: 2fr 1fr 2fr;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
-}
-
-.page-title {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-
-.logo-name {
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
 }
 
 .menu {
