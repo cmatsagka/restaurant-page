@@ -100,18 +100,30 @@ button:active {
 	gap: 2rem;
 }
 
+.logo-name {
+	text-align: center;
+}
+
 .menu {
-	grid-column: 1 / -1;
-	grid-row: 1 / -1;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.menu-item {
+	background-color: hsl(16, 100%, 86%);
+	padding: 1.5rem;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
 .menu-item h3 {
 	display: flex;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: center;
 }
 
 .item-price {
