@@ -45,23 +45,33 @@ export function loadMenu() {
 	const list = document.createElement('ul');
 	list.classList.add('menu');
 
-	for (let i = 0; i < menuItems.length; i++) {
+	function createMenuItem(title, price, description) {
 		const listItem = document.createElement('li');
 		listItem.classList.add('menu-item');
 
 		const itemName = document.createElement('h3');
-		itemName.textContent = menuItems[i].name;
+		itemName.textContent = title;
 
 		const itemPrice = document.createElement('span');
-		itemPrice.textContent = menuItems[i].price;
+		itemPrice.textContent = price;
 		itemPrice.classList.add('item-price');
 
 		const itemDescription = document.createElement('p');
-		itemDescription.textContent = menuItems[i].description;
+		itemDescription.textContent = description;
 
 		listItem.appendChild(itemName);
 		itemName.appendChild(itemPrice);
 		listItem.appendChild(itemDescription);
+
+		return listItem;
+	}
+
+	for (let i = 0; i < menuItems.length; i++) {
+		const listItem = createMenuItem(
+			menuItems[i].name,
+			menuItems[i].price,
+			menuItems[i].description
+		);
 
 		list.appendChild(listItem);
 	}
