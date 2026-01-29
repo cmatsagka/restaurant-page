@@ -98,3 +98,18 @@ button:active {
 	grid-template-columns: 1fr 200px 1fr;
 	gap: 2rem;
 }
+
+.logo-small {
+	grid-column: 2;
+	grid-row: 1;
+	width: 100%;
+}
+
+.page-title {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.menu {
+	grid-column: 1 / span 3;
+}
