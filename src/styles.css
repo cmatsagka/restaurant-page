@@ -118,3 +118,15 @@ button:active {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1rem;
 }
+
+.menu-item h3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.item-price {
+	font-size: 1rem;
+	font-weight: 400;
+	color: hsl(16, 100%, 25%);
+}

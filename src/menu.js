@@ -60,7 +60,7 @@ export function loadMenu() {
 		itemDescription.textContent = menuItems[i].description;
 
 		listItem.appendChild(itemName);
-		listItem.appendChild(itemPrice);
+		itemName.appendChild(itemPrice);
 		listItem.appendChild(itemDescription);
 
 		list.appendChild(listItem);
