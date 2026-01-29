@@ -20,12 +20,12 @@ const menuItems = [
 		name: 'Burratamas',
 		price: '€7',
 		description:
-			'Burrata, basil oil, garlic oil, sundried tomato sauce and homemade breadsticks.',
+			'Burrata, basil oil, garlic oil, sun-dried tomato sauce and homemade breadsticks.',
 	},
 	{
-		name: 'Gorgonziola',
+		name: 'Gorgonzola',
 		price: '€12',
-		description: 'Pasta with zuccini, onion, gorgonziola and local wine.',
+		description: 'Pasta with zucchini, onion, gorgonzola and local wine.',
 	},
 	{
 		name: 'Tsiprela',
@@ -76,6 +76,9 @@ export function loadMenu() {
 		const listItem = document.createElement('li');
 		listItem.classList.add('menu-item');
 
+		const itemHeader = document.createElement('div');
+		itemHeader.classList.add('menu-item-header');
+
 		const itemName = document.createElement('h3');
 		itemName.textContent = title;
 
@@ -86,8 +89,9 @@ export function loadMenu() {
 		const itemDescription = document.createElement('p');
 		itemDescription.textContent = description;
 
-		listItem.appendChild(itemName);
-		itemName.appendChild(itemPrice);
+		itemHeader.appendChild(itemName);
+		itemHeader.appendChild(itemPrice);
+		listItem.appendChild(itemHeader);
 		listItem.appendChild(itemDescription);
 
 		return listItem;
