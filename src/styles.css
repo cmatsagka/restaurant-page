@@ -179,6 +179,19 @@ button.active:active {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	position: relative;
+}
+
+.menu-item::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-90%);
+	width: 50%;
+	height: 1px;
+	background-color: hsl(16, 100%, 30%);
+	opacity: 0.3;
 }
 
 .about-txt-container,
