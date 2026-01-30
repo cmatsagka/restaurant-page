@@ -120,6 +120,18 @@ export function loadContact() {
 		return formDrop;
 	}
 
+	const formTxt = document.createElement('div');
+	formTxt.classList.add('form-txt-area');
+
+	const label = document.createElement('label');
+	label.textContent = 'Write a message to us';
+
+	const textArea = document.createElement('textarea');
+	textArea.placeholder = 'This is where you type...';
+
+	formTxt.appendChild(label);
+	formTxt.appendChild(textArea);
+
 	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
 
 	form.appendChild(createFormFields('Email', 'email', 'Your email'));
@@ -127,6 +139,8 @@ export function loadContact() {
 	form.appendChild(
 		createFormDropdown(['Reservation', 'Private Event', 'General'])
 	);
+
+	form.appendChild(formTxt);
 
 	content.appendChild(form);
 }
