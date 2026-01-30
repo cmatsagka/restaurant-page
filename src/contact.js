@@ -139,6 +139,8 @@ export function loadContact() {
 
 	submitBtn.addEventListener('click', (e) => {
 		e.preventDefault();
+
+		form.textContent = `Thank you! We have received your message. We will get back to you soon.`;
 	});
 
 	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
