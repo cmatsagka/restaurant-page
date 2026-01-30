@@ -19,17 +19,12 @@ export function loadContact() {
 		})
 	);
 
-	// content.appendChild(header);
+	const pageHeader = el(
+		'div',
+		{ className: 'page-header' },
+		el('h1', { className: 'page-title', textContent: 'Contact Us' })
+	);
 
-	const pageHeader = document.createElement('div');
-	pageHeader.classList.add('page-header');
-	content.appendChild(pageHeader);
-
-	const headline = document.createElement('h1');
-	headline.textContent = 'Contact Us';
-	headline.classList.add('page-title');
-
-	pageHeader.appendChild(headline);
 	pageHeader.appendChild(logoName);
 	content.appendChild(pageHeader);
 
