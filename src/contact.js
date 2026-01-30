@@ -28,8 +28,22 @@ export function loadContact() {
 	pageHeader.appendChild(logoName);
 	content.appendChild(pageHeader);
 
-	const infoContainer = document.createElement('div');
-	infoContainer.classList.add('contact-container');
+	const infoContainer = el(
+		'div',
+		{ className: 'contact-container' },
+		createContactSection('Find Us', [
+			'123 Sourdough Lane, Bread District',
+			'Athens, Greece',
+		]),
+		createContactSection('Opening Hours', [
+			'Mon - Thu: 12:00 - 00:00',
+			'Fri - Sun: 12:00 - 02:00',
+		]),
+		createContactSection('Reservations', [
+			'+30 1234567891',
+			'hello@zoumi-bistro.com',
+		])
+	);
 
 	function createContactSection(title, lines) {
 		const section = document.createElement('div');
@@ -47,27 +61,6 @@ export function loadContact() {
 
 		return section;
 	}
-
-	infoContainer.appendChild(
-		createContactSection('Find Us', [
-			'123 Sourdough Lane, Bread District',
-			'Athens, Greece',
-		])
-	);
-
-	infoContainer.appendChild(
-		createContactSection('Opening Hours', [
-			'Mon - Thu: 12:00 - 00:00',
-			'Fri - Sun: 12:00 - 02:00',
-		])
-	);
-
-	infoContainer.appendChild(
-		createContactSection('Reservations', [
-			'+30 1234567891',
-			'hello@zoumi-bistro.com',
-		])
-	);
 
 	content.appendChild(infoContainer);
 
