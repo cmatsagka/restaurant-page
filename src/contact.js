@@ -77,17 +77,17 @@ export function loadContact() {
 	const form = document.createElement('form');
 	form.classList.add('contact-form');
 
-	const formGroup = document.createElement('div');
-	formGroup.classList.add('form-group');
-
-	form.appendChild(formGroup);
-
 	function createFormFields(
 		fieldName,
 		fieldType,
 		fieldPlaceholder,
 		isRequired
 	) {
+		const formGroup = document.createElement('div');
+		formGroup.classList.add('form-group');
+
+		form.appendChild(formGroup);
+
 		const label = document.createElement('label');
 		label.textContent = fieldName;
 
@@ -105,11 +105,14 @@ export function loadContact() {
 	}
 
 	function createFormDropdown(dropdownOption) {
+		const formDrop = document.createElement('div');
+		formDrop.classList.add('form-dropdown');
+
 		const label = document.createElement('label');
 		label.textContent = 'Subject';
 
 		const dropdown = document.createElement('select');
-		dropdown.classList.add('subject-dropdown');
+		dropdown.classList.add('form-dropdown');
 
 		dropdownOption.forEach((text) => {
 			const option = document.createElement('option');
@@ -118,13 +121,16 @@ export function loadContact() {
 			dropdown.appendChild(option);
 		});
 
-		formGroup.required = true;
+		dropdown.required = true;
 
-		formGroup.appendChild(label);
-		formGroup.appendChild(dropdown);
+		formDrop.appendChild(label);
+		formDrop.appendChild(dropdown);
 
-		return formGroup;
+		return formDrop;
 	}
+
+	const formTxt = document.createElement('div');
+	formTxt.classList.add('form-txt-area');
 
 	const label = document.createElement('label');
 	label.textContent = 'Write a message to us';
@@ -133,12 +139,15 @@ export function loadContact() {
 	textArea.placeholder = 'This is where you type...';
 	textArea.required = true;
 
+	formTxt.appendChild(label);
+	formTxt.appendChild(textArea);
+
 	const submitBtn = document.createElement('button');
 	submitBtn.classList.add('submit-btn');
 	submitBtn.textContent = 'Submit';
 	submitBtn.type = 'submit';
 
-	submitBtn.addEventListener('submit', (e) => {
+	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		form.classList.add('submitted');
 
@@ -162,9 +171,7 @@ export function loadContact() {
 	form.appendChild(
 		createFormDropdown(['Reservation', 'Private Event', 'General'])
 	);
-	form.appendChild(formGroup);
-	formGroup.appendChild(label);
-	formGroup.appendChild(textArea);
+	form.appendChild(formTxt);
 	form.appendChild(submitBtn);
 
 	content.appendChild(form);
