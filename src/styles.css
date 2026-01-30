@@ -238,6 +238,7 @@ blockquote {
 	gap: 1rem;
 	display: flex;
 	flex-direction: column;
+	overflow: visible;
 }
 
 .form-group,

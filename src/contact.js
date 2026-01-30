@@ -4,6 +4,48 @@ export function loadContact() {
 	const content = document.querySelector('#content');
 	content.classList.add('contact-page');
 
+	function el(type, props = {}, ...children) {
+		const dom = document.createElement(type);
+
+		if (props.className) {
+			dom.className = props.className;
+		}
+		if (props.textContent) {
+			dom.textContent = props.textContent;
+		}
+		if (props.src) {
+			dom.src = props.src;
+		}
+
+		Object.keys(props).forEach((key) => {
+			const specialProps = ['className', 'textContent', 'src'];
+			if (!specialProps.includes(key)) {
+				dom.setAttribute(key, props[key]);
+			}
+		});
+
+		children.forEach((child) => {
+			if (typeof child === 'string') {
+				dom.appendChild(document.createTextNode(child));
+			} else if (child instanceof Node) {
+				dom.appendChild(child);
+			}
+		});
+		return dom;
+	}
+
+	const header = el(
+		'div',
+		{ className: 'page-header' },
+		el('h1', {
+			textContent: 'Contact Us',
+			className: 'page-title',
+		}),
+		el('p', { textContent: 'We would love to hear from you.' })
+	);
+
+	content.appendChild(header);
+
 	const logoName = document.createElement('div');
 	logoName.classList.add('logo-name');
 	content.appendChild(logoName);
