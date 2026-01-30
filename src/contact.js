@@ -140,7 +140,17 @@ export function loadContact() {
 	submitBtn.addEventListener('click', (e) => {
 		e.preventDefault();
 
-		form.textContent = `Thank you! We have received your message. We will get back to you soon.`;
+		form.replaceChildren();
+
+		const title = document.createElement('h3');
+		title.textContent = 'Thank you!';
+
+		const p1 = document.createElement('p');
+		p1.textContent = 'Thank We have received your message.';
+		const p2 = document.createElement('p');
+		p2.textContent = 'We will get back to you soon.';
+
+		form.append(title, p1, p2);
 	});
 
 	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
