@@ -73,4 +73,21 @@ export function loadContact() {
 	);
 
 	content.appendChild(infoContainer);
+
+	const form = document.createElement('form');
+	form.classList.add('contact-form');
+
+	const formGroup = document.createElement('div');
+	formGroup.classList.add('form-group');
+	const label = document.createElement('label');
+	label.textContent = 'Name';
+	const nameInput = document.createElement('input');
+	nameInput.type = 'text';
+	nameInput.placeholder = 'Your name goes here!';
+
+	formGroup.appendChild(label);
+	formGroup.appendChild(nameInput);
+	form.appendChild(formGroup);
+
+	content.appendChild(form);
 }
