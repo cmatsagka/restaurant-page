@@ -213,9 +213,12 @@ blockquote {
 	line-height: 1.8;
 }
 
-form {
+.contact-form {
 	background-color: hsl(16, 100%, 86%);
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
+	padding: 2.5rem;
+	border-radius: 12px;
+	width: 100%;
+	max-width: 600px;
+	margin: 2rem auto;
+	gap: 1.5rem;
 }
