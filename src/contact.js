@@ -1,69 +1,29 @@
 import restaurantLogo from './assets/restaurant.png';
+import { el } from './domUtils.js';
 
 export function loadContact() {
 	const content = document.querySelector('#content');
 	content.classList.add('contact-page');
 
-	function el(type, props = {}, ...children) {
-		const dom = document.createElement(type);
-
-		if (props.className) {
-			dom.className = props.className;
-		}
-		if (props.textContent) {
-			dom.textContent = props.textContent;
-		}
-		if (props.src) {
-			dom.src = props.src;
-		}
-
-		Object.keys(props).forEach((key) => {
-			const specialProps = ['className', 'textContent', 'src'];
-			if (!specialProps.includes(key)) {
-				dom.setAttribute(key, props[key]);
-			}
-		});
-
-		children.forEach((child) => {
-			if (typeof child === 'string') {
-				dom.appendChild(document.createTextNode(child));
-			} else if (child instanceof Node) {
-				dom.appendChild(child);
-			}
-		});
-		return dom;
-	}
-
-	const header = el(
+	const logoName = el(
 		'div',
-		{ className: 'page-header' },
-		el('h1', {
-			textContent: 'Contact Us',
-			className: 'page-title',
+		{ className: 'logo-name' },
+		el('h2', {
+			textContent: 'Zoumi',
+			className: 'restaurant-name',
 		}),
-		el('p', { textContent: 'We would love to hear from you.' })
+		el('img', {
+			src: restaurantLogo,
+			alt: 'Zoumi Bistro logo',
+			className: 'logo-small',
+		})
 	);
 
-	content.appendChild(header);
-
-	const logoName = document.createElement('div');
-	logoName.classList.add('logo-name');
-	content.appendChild(logoName);
+	// content.appendChild(header);
 
 	const pageHeader = document.createElement('div');
 	pageHeader.classList.add('page-header');
 	content.appendChild(pageHeader);
-
-	const restaurantName = document.createElement('h2');
-	restaurantName.textContent = 'Zoumi';
-	restaurantName.classList.add('restaurant-name');
-	logoName.appendChild(restaurantName);
-
-	const image = document.createElement('img');
-	image.src = restaurantLogo;
-	image.alt = 'Zoumi Bistro logo';
-	image.classList.add('logo-small');
-	logoName.appendChild(image);
 
 	const headline = document.createElement('h1');
 	headline.textContent = 'Contact Us';
