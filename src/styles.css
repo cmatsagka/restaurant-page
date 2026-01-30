@@ -111,7 +111,7 @@ button.active:active {
 	flex-direction: column;
 	align-items: center;
 	gap: 0.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 }
 
 .logo-name {
@@ -150,6 +150,7 @@ button.active:active {
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 1.5rem;
 	width: 100%;
+	margin-top: 0;
 }
 
 .menu-item-header {
@@ -185,6 +186,7 @@ button.active:active {
 	flex-direction: column;
 	max-width: 65ch;
 	text-align: left;
+	margin-top: 0;
 }
 
 .about-txt-container p,
