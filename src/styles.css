@@ -129,7 +129,7 @@ button.active:active {
 }
 
 .page-title {
-	font-size: 3rem;
+	font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
 	text-transform: capitalize;
 	color: hsl(16, 100%, 25%);
 }
