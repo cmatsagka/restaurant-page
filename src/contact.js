@@ -97,21 +97,31 @@ export function loadContact() {
 		return formGroup;
 	}
 
+	function createFormDropdown(dropdownOption) {
+		const formDrop = document.createElement('div');
+		formDrop.classList.add('form-dropdown');
+
+		const label = document.createElement('label');
+		label.textContent = 'Subject';
+
+		const dropdown = document.createElement('select');
+		dropdown.classList.add('subject-dropdown');
+
+		const option = document.createElement('option');
+		option.textContent = dropdownOption;
+
+		dropdown.appendChild(option);
+		formDrop.appendChild(label);
+		formDrop.appendChild(dropdown);
+
+		return formDrop;
+	}
+
 	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
 
 	form.appendChild(createFormFields('Email', 'email', 'Your email'));
 
-	const label = document.createElement('label');
-	label.textContent = 'Subject';
-	const dropdown = document.createElement('select');
-	dropdown.classList.add('subject-dropdown');
-
-	const option = document.createElement('option');
-	option.textContent = 'Reservation';
-
-	dropdown.appendChild(option);
-	form.appendChild(label);
-	form.appendChild(dropdown);
+	form.appendChild(createFormDropdown('Reservation'));
 
 	content.appendChild(form);
 }
