@@ -77,12 +77,12 @@ export function loadContact() {
 	const form = document.createElement('form');
 	form.classList.add('contact-form');
 
+	const formGroup = document.createElement('div');
+	formGroup.classList.add('form-group');
+
+	form.appendChild(formGroup);
+
 	function createFormFields(fieldName, fieldType, fieldPlaceholder) {
-		const formGroup = document.createElement('div');
-		formGroup.classList.add('form-group');
-
-		form.appendChild(formGroup);
-
 		const label = document.createElement('label');
 		label.textContent = fieldName;
 
