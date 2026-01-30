@@ -113,18 +113,15 @@ export function loadContact() {
 		return formDrop;
 	}
 
-	const formTxt = document.createElement('div');
-	formTxt.classList.add('form-txt-area');
-
-	const label = document.createElement('label');
-	label.textContent = 'Write a message to us';
-
-	const textArea = document.createElement('textarea');
-	textArea.placeholder = 'This is where you type...';
-	textArea.required = true;
-
-	formTxt.appendChild(label);
-	formTxt.appendChild(textArea);
+	const formTxt = el(
+		'div',
+		{ className: 'form-txt-area' },
+		el('label', { textContent: 'Write a message to us' }),
+		el('textarea', {
+			placeholder: 'This is where you type...',
+			required: true,
+		})
+	);
 
 	const formSubmit = document.createElement('div');
 	formSubmit.classList.add('form-submit');
