@@ -133,9 +133,6 @@ export function loadContact() {
 	textArea.placeholder = 'This is where you type...';
 	textArea.required = true;
 
-	formGroup.appendChild(label);
-	formGroup.appendChild(textArea);
-
 	const submitBtn = document.createElement('button');
 	submitBtn.classList.add('submit-btn');
 	submitBtn.textContent = 'Submit';
@@ -166,6 +163,8 @@ export function loadContact() {
 		createFormDropdown(['Reservation', 'Private Event', 'General'])
 	);
 	form.appendChild(formGroup);
+	formGroup.appendChild(label);
+	formGroup.appendChild(textArea);
 	form.appendChild(submitBtn);
 
 	content.appendChild(form);
