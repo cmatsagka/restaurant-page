@@ -86,8 +86,6 @@ export function loadContact() {
 		const formGroup = document.createElement('div');
 		formGroup.classList.add('form-group');
 
-		form.appendChild(formGroup);
-
 		const label = document.createElement('label');
 		label.textContent = fieldName;
 
@@ -142,10 +140,15 @@ export function loadContact() {
 	formTxt.appendChild(label);
 	formTxt.appendChild(textArea);
 
+	const formSubmit = document.createElement('div');
+	formSubmit.classList.add('form-submit');
+
 	const submitBtn = document.createElement('button');
 	submitBtn.classList.add('submit-btn');
 	submitBtn.textContent = 'Submit';
 	submitBtn.type = 'submit';
+
+	formSubmit.appendChild(submitBtn);
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
@@ -172,7 +175,7 @@ export function loadContact() {
 		createFormDropdown(['Reservation', 'Private Event', 'General'])
 	);
 	form.appendChild(formTxt);
-	form.appendChild(submitBtn);
+	form.appendChild(formSubmit);
 
 	content.appendChild(form);
 }

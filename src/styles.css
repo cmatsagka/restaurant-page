@@ -219,8 +219,8 @@ blockquote {
 	border-radius: 12px;
 	width: 100%;
 	max-width: 600px;
-	height: 550px;
-	margin: 2rem auto;
+	min-height: 550px;
+	margin: 1.5rem auto;
 	gap: 1rem;
 	overflow: hidden;
 	display: flex;
@@ -229,7 +229,8 @@ blockquote {
 
 .form-group,
 .form-dropdown,
-.form-txt-area {
+.form-txt-area,
+.form-submit {
 	display: flex;
 	flex-direction: column;
 	gap: 0.6rem;
