@@ -187,6 +187,7 @@ button.active:active {
 	max-width: 65ch;
 	text-align: left;
 	margin-top: 0;
+	gap: 1rem;
 }
 
 .about-txt-container p,
