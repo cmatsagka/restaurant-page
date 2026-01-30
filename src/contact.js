@@ -64,8 +64,7 @@ export function loadContact() {
 
 	content.appendChild(infoContainer);
 
-	const form = document.createElement('form');
-	form.classList.add('contact-form');
+	const form = el('form', { className: 'contact-form' });
 
 	function createFormFields(
 		fieldName,
