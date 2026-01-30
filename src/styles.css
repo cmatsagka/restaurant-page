@@ -223,14 +223,14 @@ blockquote {
 	margin: 2rem auto;
 	gap: 1.5rem;
 	overflow: hidden;
-}
-
-.form-group,
-.form-dropdown,
-.form-txt-area {
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
 	text-align: left;
 }
 

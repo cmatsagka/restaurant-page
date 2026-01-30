@@ -105,9 +105,6 @@ export function loadContact() {
 	}
 
 	function createFormDropdown(dropdownOption) {
-		const formDrop = document.createElement('div');
-		formDrop.classList.add('form-dropdown');
-
 		const label = document.createElement('label');
 		label.textContent = 'Subject';
 
@@ -121,16 +118,13 @@ export function loadContact() {
 			dropdown.appendChild(option);
 		});
 
-		dropdown.required = true;
+		formGroup.required = true;
 
-		formDrop.appendChild(label);
-		formDrop.appendChild(dropdown);
+		formGroup.appendChild(label);
+		formGroup.appendChild(dropdown);
 
-		return formDrop;
+		return formGroup;
 	}
-
-	const formTxt = document.createElement('div');
-	formTxt.classList.add('form-txt-area');
 
 	const label = document.createElement('label');
 	label.textContent = 'Write a message to us';
@@ -139,8 +133,8 @@ export function loadContact() {
 	textArea.placeholder = 'This is where you type...';
 	textArea.required = true;
 
-	formTxt.appendChild(label);
-	formTxt.appendChild(textArea);
+	formGroup.appendChild(label);
+	formGroup.appendChild(textArea);
 
 	const submitBtn = document.createElement('button');
 	submitBtn.classList.add('submit-btn');
@@ -171,7 +165,7 @@ export function loadContact() {
 	form.appendChild(
 		createFormDropdown(['Reservation', 'Private Event', 'General'])
 	);
-	form.appendChild(formTxt);
+	form.appendChild(formGroup);
 	form.appendChild(submitBtn);
 
 	content.appendChild(form);
