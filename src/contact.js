@@ -70,46 +70,35 @@ export function loadContact() {
 		fieldPlaceholder,
 		isRequired
 	) {
-		const formGroup = document.createElement('div');
-		formGroup.classList.add('form-group');
-
-		const label = document.createElement('label');
-		label.textContent = fieldName;
-
-		const nameInput = document.createElement('input');
-		nameInput.type = fieldType;
-
-		nameInput.placeholder = fieldPlaceholder;
-
-		nameInput.required = isRequired;
-
-		formGroup.appendChild(label);
-		formGroup.appendChild(nameInput);
+		const formGroup = el(
+			'div',
+			{ className: 'form-group' },
+			el('label', { textContent: fieldName }),
+			el('input', {
+				type: fieldType,
+				placeholder: fieldPlaceholder,
+				required: isRequired,
+			})
+		);
 
 		return formGroup;
 	}
 
 	function createFormDropdown(dropdownOption) {
-		const formDrop = document.createElement('div');
-		formDrop.classList.add('form-dropdown');
-
-		const label = document.createElement('label');
-		label.textContent = 'Subject';
-
-		const dropdown = document.createElement('select');
-
-		dropdownOption.forEach((text) => {
-			const option = document.createElement('option');
-			option.textContent = text;
-
-			dropdown.appendChild(option);
-		});
-
-		dropdown.required = true;
-
-		formDrop.appendChild(label);
-		formDrop.appendChild(dropdown);
-
+		const formDrop = el(
+			'div',
+			{ className: 'form-dropdown' },
+			el('label', { textContent: 'Subject', for: 'subject-select' }),
+			el(
+				'select',
+				{ id: 'subject-select', name: 'subject', required: true },
+				...dropdownOption.map((optionText) =>
+					el('option', {
+						textContent: optionText,
+					})
+				)
+			)
+		);
 		return formDrop;
 	}
 
