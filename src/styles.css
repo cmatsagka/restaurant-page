@@ -251,6 +251,16 @@ textarea:focus {
 	box-shadow: 0 0 5px hsla(16, 100%, 45%, 0.3);
 }
 
+input:invalid,
+textarea:invalid {
+	border-color: hsl(0, 100%, 65%);
+}
+
+input:user-invalid,
+textarea:user-invalid {
+	border: 2px solid hsl(0, 100%, 65%);
+}
+
 textarea {
 	resize: vertical;
 	min-height: 120px;
