@@ -139,6 +139,7 @@ export function loadContact() {
 
 	submitBtn.addEventListener('click', (e) => {
 		e.preventDefault();
+		form.classList.add('submitted');
 
 		form.replaceChildren();
 

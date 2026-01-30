@@ -253,3 +253,10 @@ textarea {
 	resize: vertical;
 	min-height: 120px;
 }
+
+.contact-form.submitted {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	min-height: 300px;
+}
