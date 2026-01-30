@@ -8,6 +8,10 @@ export function loadAbout() {
 	logoName.classList.add('logo-name');
 	content.appendChild(logoName);
 
+	const pageHeader = document.createElement('div');
+	pageHeader.classList.add('page-header');
+	content.appendChild(pageHeader);
+
 	const restaurantName = document.createElement('h2');
 	restaurantName.textContent = 'Zoumi';
 	restaurantName.classList.add('restaurant-name');
@@ -22,7 +26,10 @@ export function loadAbout() {
 	const headline = document.createElement('h1');
 	headline.textContent = 'Our story';
 	headline.classList.add('page-title');
-	content.appendChild(headline);
+
+	pageHeader.appendChild(headline);
+	pageHeader.appendChild(logoName);
+	content.appendChild(pageHeader);
 
 	const storyContainer = document.createElement('div');
 	storyContainer.classList.add('about-txt-container');
