@@ -137,6 +137,10 @@ export function loadContact() {
 	submitBtn.textContent = 'Submit';
 	submitBtn.type = 'submit';
 
+	submitBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+	});
+
 	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
 	form.appendChild(createFormFields('Email', 'email', 'Your email'));
 	form.appendChild(
