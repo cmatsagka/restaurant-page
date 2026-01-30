@@ -99,7 +99,19 @@ export function loadContact() {
 
 	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
 
-	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
+	form.appendChild(createFormFields('Email', 'email', 'Your email'));
+
+	const label = document.createElement('label');
+	label.textContent = 'Subject';
+	const dropdown = document.createElement('select');
+	dropdown.classList.add('subject-dropdown');
+
+	const option = document.createElement('option');
+	option.textContent = 'Reservation';
+
+	dropdown.appendChild(option);
+	form.appendChild(label);
+	form.appendChild(dropdown);
 
 	content.appendChild(form);
 }
