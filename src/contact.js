@@ -46,18 +46,12 @@ export function loadContact() {
 	);
 
 	function createContactSection(title, lines) {
-		const section = document.createElement('div');
-		section.classList.add('contact-section');
-
-		const h3 = document.createElement('h3');
-		h3.textContent = title;
-		section.appendChild(h3);
-
-		lines.forEach((text) => {
-			const p = document.createElement('p');
-			p.textContent = text;
-			section.appendChild(p);
-		});
+		const section = el(
+			'div',
+			{ className: 'contact-section' },
+			el('h3', { textContent: title }),
+			...lines.map((text) => el('p', { textContent: text }))
+		);
 
 		return section;
 	}
@@ -136,17 +130,11 @@ export function loadContact() {
 		e.preventDefault();
 		form.classList.add('submitted');
 
-		form.replaceChildren();
-
-		const title = document.createElement('h3');
-		title.textContent = 'Thank you!';
-
-		const p1 = document.createElement('p');
-		p1.textContent = 'We have received your message.';
-		const p2 = document.createElement('p');
-		p2.textContent = 'We will get back to you soon.';
-
-		form.append(title, p1, p2);
+		form.replaceChildren(
+			el('h3', { textContent: 'Thank you!' }),
+			el('p', { textContent: 'We have received your message.' }),
+			el('p', { textContent: 'We will get back to you soon.' })
+		);
 	});
 
 	content.appendChild(form);
