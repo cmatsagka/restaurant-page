@@ -97,8 +97,9 @@ export function loadContact() {
 		return formGroup;
 	}
 
-	const formGroup = form.appendChild(
-		createFormFields('Name', 'text', 'Your name goes here')
-	);
+	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
+
+	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
+
 	content.appendChild(form);
 }
