@@ -132,15 +132,18 @@ export function loadContact() {
 	formTxt.appendChild(label);
 	formTxt.appendChild(textArea);
 
+	const submitBtn = document.createElement('button');
+	submitBtn.classList.add('submit-btn');
+	submitBtn.textContent = 'Submit';
+	submitBtn.type = 'submit';
+
 	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
-
 	form.appendChild(createFormFields('Email', 'email', 'Your email'));
-
 	form.appendChild(
 		createFormDropdown(['Reservation', 'Private Event', 'General'])
 	);
-
 	form.appendChild(formTxt);
+	form.appendChild(submitBtn);
 
 	content.appendChild(form);
 }
