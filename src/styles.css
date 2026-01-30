@@ -36,6 +36,7 @@ button {
 	border-radius: 12px;
 	border: none;
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
 
 button:hover {
@@ -222,7 +223,6 @@ blockquote {
 	min-height: 550px;
 	margin: 1.5rem auto;
 	gap: 1rem;
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 }
@@ -250,7 +250,7 @@ textarea {
 input:focus,
 textarea:focus {
 	outline: none;
-	border-color: hsl(16, 100%, 45%);
+	border-color: hsl(16, 100%, 25%);
 	box-shadow: 0 0 5px hsla(16, 100%, 45%, 0.3);
 }
 

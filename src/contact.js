@@ -110,7 +110,6 @@ export function loadContact() {
 		label.textContent = 'Subject';
 
 		const dropdown = document.createElement('select');
-		dropdown.classList.add('form-dropdown');
 
 		dropdownOption.forEach((text) => {
 			const option = document.createElement('option');
@@ -160,7 +159,7 @@ export function loadContact() {
 		title.textContent = 'Thank you!';
 
 		const p1 = document.createElement('p');
-		p1.textContent = 'Thank We have received your message.';
+		p1.textContent = 'We have received your message.';
 		const p2 = document.createElement('p');
 		p2.textContent = 'We will get back to you soon.';
 
