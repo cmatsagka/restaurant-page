@@ -137,7 +137,6 @@ button.active:active {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 2rem;
 }
 
 .restaurant-name {
@@ -185,7 +184,6 @@ button.active:active {
 	display: flex;
 	flex-direction: column;
 	max-width: 65ch;
-	gap: 1.5rem;
 	text-align: left;
 }
 
