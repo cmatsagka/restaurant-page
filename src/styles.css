@@ -114,20 +114,25 @@ button.active:active {
 	margin-bottom: 1rem;
 }
 
+.logo-name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.2rem;
+	color: hsl(16, 100%, 25%);
+}
+
+.page-title {
+	font-size: 3rem;
+	text-transform: capitalize;
+	color: hsl(16, 100%, 25%);
+}
+
 .menu-page {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
-}
-
-.logo-name {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	gap: 0.5rem;
 }
 
 .restaurant-name {
@@ -177,10 +182,6 @@ button.active:active {
 	max-width: 65ch;
 	gap: 1.5rem;
 	text-align: left;
-}
-
-.page-title {
-	text-align: center;
 }
 
 .about-txt-container p,
