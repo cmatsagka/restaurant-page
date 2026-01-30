@@ -82,7 +82,12 @@ export function loadContact() {
 
 	form.appendChild(formGroup);
 
-	function createFormFields(fieldName, fieldType, fieldPlaceholder) {
+	function createFormFields(
+		fieldName,
+		fieldType,
+		fieldPlaceholder,
+		isRequired
+	) {
 		const label = document.createElement('label');
 		label.textContent = fieldName;
 
@@ -90,6 +95,8 @@ export function loadContact() {
 		nameInput.type = fieldType;
 
 		nameInput.placeholder = fieldPlaceholder;
+
+		nameInput.required = isRequired;
 
 		formGroup.appendChild(label);
 		formGroup.appendChild(nameInput);
@@ -114,6 +121,8 @@ export function loadContact() {
 			dropdown.appendChild(option);
 		});
 
+		dropdown.required = true;
+
 		formDrop.appendChild(label);
 		formDrop.appendChild(dropdown);
 
@@ -128,6 +137,7 @@ export function loadContact() {
 
 	const textArea = document.createElement('textarea');
 	textArea.placeholder = 'This is where you type...';
+	textArea.required = true;
 
 	formTxt.appendChild(label);
 	formTxt.appendChild(textArea);
@@ -137,7 +147,7 @@ export function loadContact() {
 	submitBtn.textContent = 'Submit';
 	submitBtn.type = 'submit';
 
-	submitBtn.addEventListener('click', (e) => {
+	submitBtn.addEventListener('submit', (e) => {
 		e.preventDefault();
 		form.classList.add('submitted');
 
@@ -154,8 +164,10 @@ export function loadContact() {
 		form.append(title, p1, p2);
 	});
 
-	form.appendChild(createFormFields('Name', 'text', 'Your name goes here'));
-	form.appendChild(createFormFields('Email', 'email', 'Your email'));
+	form.appendChild(
+		createFormFields('Name', 'text', 'Your name goes here', true)
+	);
+	form.appendChild(createFormFields('Email', 'email', 'Your email', true));
 	form.appendChild(
 		createFormDropdown(['Reservation', 'Private Event', 'General'])
 	);
