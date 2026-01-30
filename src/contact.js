@@ -107,10 +107,13 @@ export function loadContact() {
 		const dropdown = document.createElement('select');
 		dropdown.classList.add('subject-dropdown');
 
-		const option = document.createElement('option');
-		option.textContent = dropdownOption;
+		dropdownOption.forEach((text) => {
+			const option = document.createElement('option');
+			option.textContent = text;
 
-		dropdown.appendChild(option);
+			dropdown.appendChild(option);
+		});
+
 		formDrop.appendChild(label);
 		formDrop.appendChild(dropdown);
 
@@ -121,7 +124,9 @@ export function loadContact() {
 
 	form.appendChild(createFormFields('Email', 'email', 'Your email'));
 
-	form.appendChild(createFormDropdown('Reservation'));
+	form.appendChild(
+		createFormDropdown(['Reservation', 'Private Event', 'General'])
+	);
 
 	content.appendChild(form);
 }
