@@ -123,15 +123,15 @@ export function loadContact() {
 		})
 	);
 
-	const formSubmit = document.createElement('div');
-	formSubmit.classList.add('form-submit');
-
-	const submitBtn = document.createElement('button');
-	submitBtn.classList.add('submit-btn');
-	submitBtn.textContent = 'Submit';
-	submitBtn.type = 'submit';
-
-	formSubmit.appendChild(submitBtn);
+	const formSubmit = el(
+		'div',
+		{ className: 'form-submit' },
+		el('button', {
+			textContent: 'Submit',
+			className: 'submit-btn',
+			type: 'submit',
+		})
+	);
 
 	const form = el(
 		'form',
