@@ -222,7 +222,7 @@ blockquote {
 	min-height: 450px;
 	margin: 2rem auto;
 	gap: 1.5rem;
-	transition: all 0.3s ease;
+	overflow: hidden;
 }
 
 .form-group,
@@ -256,9 +256,17 @@ textarea {
 	min-height: 120px;
 }
 
-.contact-form.submitted {
+.submitted {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-	min-height: 300px;
+	gap: 1rem;
+	padding: 0;
+}
+
+.submitted p {
+	max-width: 30ch;
+	margin: 0 auto;
 }
