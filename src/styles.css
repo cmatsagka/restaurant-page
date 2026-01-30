@@ -241,3 +241,10 @@ textarea {
 	background-color: hsl(16, 100%, 95%);
 	color: hsl(16, 100%, 20%);
 }
+
+input:focus,
+textarea:focus {
+	outline: none;
+	border-color: hsl(16, 100%, 45%);
+	box-shadow: 0 0 5px hsla(16, 100%, 45%, 0.3);
+}
