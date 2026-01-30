@@ -64,8 +64,6 @@ export function loadContact() {
 
 	content.appendChild(infoContainer);
 
-	const form = el('form', { className: 'contact-form' });
-
 	function createFormFields(
 		fieldName,
 		fieldType,
@@ -138,6 +136,16 @@ export function loadContact() {
 
 	formSubmit.appendChild(submitBtn);
 
+	const form = el(
+		'form',
+		{ className: 'contact-form' },
+		createFormFields('Name', 'text', 'Your name goes here', true),
+		createFormFields('Email', 'email', 'Your email', true),
+		createFormDropdown(['Reservation', 'Private Event', 'General']),
+		formTxt,
+		formSubmit
+	);
+
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		form.classList.add('submitted');
@@ -154,16 +162,6 @@ export function loadContact() {
 
 		form.append(title, p1, p2);
 	});
-
-	form.appendChild(
-		createFormFields('Name', 'text', 'Your name goes here', true)
-	);
-	form.appendChild(createFormFields('Email', 'email', 'Your email', true));
-	form.appendChild(
-		createFormDropdown(['Reservation', 'Private Event', 'General'])
-	);
-	form.appendChild(formTxt);
-	form.appendChild(formSubmit);
 
 	content.appendChild(form);
 }
