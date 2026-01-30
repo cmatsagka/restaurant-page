@@ -122,6 +122,11 @@ button.active:active {
 	color: hsl(16, 100%, 25%);
 }
 
+.logo-small {
+	height: 80px;
+	width: auto;
+}
+
 .page-title {
 	font-size: 3rem;
 	text-transform: capitalize;
