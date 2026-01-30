@@ -269,6 +269,11 @@ textarea {
 	min-height: 120px;
 }
 
+.submit-btn {
+	background-color: hsl(16, 100%, 66%);
+	color: hsl(16, 100%, 95%);
+}
+
 .submitted {
 	display: flex;
 	flex-direction: column;
