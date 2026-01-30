@@ -77,17 +77,28 @@ export function loadContact() {
 	const form = document.createElement('form');
 	form.classList.add('contact-form');
 
-	const formGroup = document.createElement('div');
-	formGroup.classList.add('form-group');
-	const label = document.createElement('label');
-	label.textContent = 'Name';
-	const nameInput = document.createElement('input');
-	nameInput.type = 'text';
-	nameInput.placeholder = 'Your name goes here!';
+	function createFormFields(fieldName, fieldType, fieldPlaceholder) {
+		const formGroup = document.createElement('div');
+		formGroup.classList.add('form-group');
 
-	formGroup.appendChild(label);
-	formGroup.appendChild(nameInput);
-	form.appendChild(formGroup);
+		form.appendChild(formGroup);
 
+		const label = document.createElement('label');
+		label.textContent = fieldName;
+
+		const nameInput = document.createElement('input');
+		nameInput.type = fieldType;
+
+		nameInput.placeholder = fieldPlaceholder;
+
+		formGroup.appendChild(label);
+		formGroup.appendChild(nameInput);
+
+		return formGroup;
+	}
+
+	const formGroup = form.appendChild(
+		createFormFields('Name', 'text', 'Your name goes here')
+	);
 	content.appendChild(form);
 }
