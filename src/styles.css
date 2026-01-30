@@ -106,6 +106,14 @@ button.active:active {
 	line-height: 1.6;
 }
 
+.page-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
 .menu-page {
 	display: flex;
 	flex-direction: column;
