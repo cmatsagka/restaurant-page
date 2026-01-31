@@ -1,33 +1,30 @@
 import restaurantLogo from './assets/restaurant.png';
+import { el } from './domUtils.js';
 
 export function loadAbout() {
 	const content = document.querySelector('#content');
-	content.classList.add('about-page');
+	content.classList.add('contact-page');
 
-	const logoName = document.createElement('div');
-	logoName.classList.add('logo-name');
-	content.appendChild(logoName);
+	const logoName = el(
+		'div',
+		{ className: 'logo-name' },
+		el('h2', {
+			textContent: 'Zoumi',
+			className: 'restaurant-name',
+		}),
+		el('img', {
+			src: restaurantLogo,
+			alt: 'Zoumi Bistro logo',
+			className: 'logo-small',
+		})
+	);
 
-	const pageHeader = document.createElement('div');
-	pageHeader.classList.add('page-header');
-	content.appendChild(pageHeader);
+	const pageHeader = el(
+		'div',
+		{ className: 'page-header' },
+		el('h1', { className: 'page-title', textContent: 'Our story' })
+	);
 
-	const restaurantName = document.createElement('h2');
-	restaurantName.textContent = 'Zoumi';
-	restaurantName.classList.add('restaurant-name');
-	logoName.appendChild(restaurantName);
-
-	const image = document.createElement('img');
-	image.src = restaurantLogo;
-	image.alt = 'Zoumi Bistro logo';
-	image.classList.add('logo-small');
-	logoName.appendChild(image);
-
-	const headline = document.createElement('h1');
-	headline.textContent = 'Our story';
-	headline.classList.add('page-title');
-
-	pageHeader.appendChild(headline);
 	pageHeader.appendChild(logoName);
 	content.appendChild(pageHeader);
 
