@@ -55,10 +55,19 @@ button:active {
 
 button.active {
 	background-color: transparent;
-	color: hsl(16, 100%, 25%);
-	border-bottom: 3px solid hsl(16, 100%, 20%);
-	border-radius: 0;
+	color: hsl(16, 100%, 20%);
+	position: relative;
 	cursor: default;
+}
+
+button.active::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0.8rem;
+	width: 25px;
+	height: 2px;
+	background-color: hsl(16, 100%, 30%);
 }
 
 button.active:active {
@@ -69,7 +78,7 @@ button.active:active {
 	display: flex;
 	justify-content: flex-end;
 	gap: 0.8rem;
-	padding: 1rem;
+	padding: 0.8rem 1.2rem;
 }
 
 #content {
