@@ -13,7 +13,9 @@ export function el(type, props = {}, ...children) {
 
 	Object.keys(props).forEach((key) => {
 		const specialProps = ['className', 'textContent', 'src'];
-		if (!specialProps.includes(key)) {
+		if (key.startsWith('on') || specialProps.includes(key)) {
+			dom[key] = props[key];
+		} else {
 			dom.setAttribute(key, props[key]);
 		}
 	});
