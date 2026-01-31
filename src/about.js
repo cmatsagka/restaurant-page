@@ -3,7 +3,7 @@ import { el } from './domUtils.js';
 
 export function loadAbout() {
 	const content = document.querySelector('#content');
-	content.classList.add('contact-page');
+	content.classList.add('about-page');
 
 	const logoName = el(
 		'div',

@@ -68,7 +68,7 @@ const menuItems = [
 
 export function loadMenu() {
 	const content = document.querySelector('#content');
-	content.classList.add('contact-page');
+	content.classList.add('menu-page');
 
 	const logoName = el(
 		'div',
