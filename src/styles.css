@@ -82,16 +82,20 @@ button.active:active {
 .home-page {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	text-align: center;
 	gap: 1rem;
 	min-height: 80vh;
 }
 
-.home-page > * {
-	position: relative;
-	top: -10vh;
+.home-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	gap: 2rem;
+	margin-bottom: 10vh;
 }
 
 .home-page h1 {
@@ -106,7 +110,7 @@ button.active:active {
 }
 
 .home-description {
-	max-width: 40ch;
+	max-width: 45ch;
 	font-size: 1.2rem;
 	color: hsl(16, 100%, 25%);
 	line-height: 1.6;
@@ -121,6 +125,11 @@ button.active:active {
 
 .cta-btn:hover {
 	transform: scale(1.05);
+}
+
+.site-footer {
+	display: flex;
+	gap: 1.5rem;
 }
 
 .page-header {
