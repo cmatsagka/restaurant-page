@@ -37,7 +37,7 @@ export function loadPage() {
 		el('p', { textContent: `© ${new Date().getFullYear()} Zoumi Bistro` }),
 		el('a', {
 			href: 'https://github.com/cmatsagka',
-			textContent: 'Build by Chrysanthi M.',
+			textContent: 'Built by Chrysanthi M.',
 		})
 	);
 
