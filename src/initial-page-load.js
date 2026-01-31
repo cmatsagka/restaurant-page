@@ -1,5 +1,7 @@
 import restaurantLogo from './assets/restaurant.png';
 import { el } from './domUtils.js';
+import { updateContent } from './index.js';
+import { loadMenu } from './menu.js';
 
 export function loadPage() {
 	const content = document.querySelector('#content');
@@ -20,4 +22,17 @@ export function loadPage() {
 	image.alt = 'Zoumi Bistro logo';
 	image.classList.add('home-logo');
 	content.appendChild(image);
+
+	const viewMenuBtn = el('button', {
+		textContent: 'View the Menu',
+		className: 'cta-btn',
+	});
+
+	const menuBtn = document.querySelector('#menu-btn');
+
+	viewMenuBtn.addEventListener('click', () => {
+		updateContent(loadMenu, menuBtn);
+	});
+
+	content.appendChild(viewMenuBtn);
 }

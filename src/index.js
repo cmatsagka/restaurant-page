@@ -17,7 +17,7 @@ function setActiveButton(activeBtn) {
 	activeBtn.classList.add('active');
 }
 
-function updateContent(loadFunction, clickedBtn) {
+export function updateContent(loadFunction, clickedBtn) {
 	content.innerHTML = '';
 	content.className = '';
 	loadFunction();
