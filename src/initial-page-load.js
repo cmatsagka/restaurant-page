@@ -1,4 +1,5 @@
 import restaurantLogo from './assets/restaurant.png';
+import { el } from './domUtils.js';
 
 export function loadPage() {
 	const content = document.querySelector('#content');
