@@ -97,26 +97,17 @@ export function loadMenu() {
 	list.classList.add('menu');
 
 	function createMenuItem(title, price, description) {
-		const listItem = document.createElement('li');
-		listItem.classList.add('menu-item');
-
-		const itemHeader = document.createElement('div');
-		itemHeader.classList.add('menu-item-header');
-
-		const itemName = document.createElement('h3');
-		itemName.textContent = title;
-
-		const itemPrice = document.createElement('span');
-		itemPrice.textContent = price;
-		itemPrice.classList.add('item-price');
-
-		const itemDescription = document.createElement('p');
-		itemDescription.textContent = description;
-
-		itemHeader.appendChild(itemName);
-		itemHeader.appendChild(itemPrice);
-		listItem.appendChild(itemHeader);
-		listItem.appendChild(itemDescription);
+		const listItem = el(
+			'li',
+			{ className: 'menu-item' },
+			el(
+				'div',
+				{ className: 'menu-item-header' },
+				el('h3', { textContent: title }),
+				el('span', { textContent: price, className: 'item-price' })
+			),
+			el('p', { textContent: description })
+		);
 
 		return listItem;
 	}
