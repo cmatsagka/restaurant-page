@@ -107,6 +107,17 @@ button.active:active {
 	line-height: 1.6;
 }
 
+.cta-btn {
+	background-color: hsl(16, 100%, 20%);
+	color: hsl(16, 100%, 85%);
+	padding: 1rem 2rem;
+	border-radius: 30px;
+}
+
+.cta-btn:hover {
+	transform: scale(1.05);
+}
+
 .page-header {
 	display: flex;
 	flex-direction: column;
