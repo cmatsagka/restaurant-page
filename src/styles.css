@@ -9,6 +9,12 @@
 
 	--action-primary: hsl(16, 75%, 45%);
 	--action-hover: hsl(16, 85%, 35%);
+	--action-light: hsl(0, 0%, 100%);
+
+	--error: hsl(0, 70%, 50%);
+	--border-clr: hsla(16, 40%, 12%, 0.1);
+	--shadow-sm: 0 2px 8px -2px hsla(16, 40%, 12%, 0.4);
+	--shadow-md: 0 12px 24px -4px hsla(16, 40%, 12%, 0.2);
 
 	font-family: 'Inter', sans-serif;
 	@supports (font-variation-settings: normal) {
@@ -20,6 +26,16 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-primary);
+	color: var(--txt-primary);
+	font-family: 'Inter', 'Segoe UI', sans-serif;
+	letter-spacing: -0.01;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 img {
@@ -34,7 +50,7 @@ ul {
 
 a {
 	text-decoration: none;
-	color: hsl(16, 100%, 15%);
+	color: inherit;
 }
 
 button,
@@ -44,28 +60,19 @@ select {
 	font: inherit;
 }
 
-body {
-	background-color: hsl(16, 100%, 66%);
-	font-family: 'Inter', 'Segoe UI', sans-serif;
-	letter-spacing: -0.01;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
 button {
 	background-color: transparent;
-	color: hsl(16, 100%, 25%);
+	color: var(--action-primary);
 	padding: 0.6rem 0.8rem;
-	border-radius: 12px;
+	border-radius: 4px;
 	border: none;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-	background-color: hsl(16, 100%, 45%);
-	color: hsl(16, 100%, 86%);
+	background-color: var(--action-hover);
+	color: var(--action-light);
 }
 
 button:active {
@@ -74,7 +81,7 @@ button:active {
 
 button.active {
 	background-color: transparent;
-	color: hsl(16, 100%, 20%);
+	color: var(--action-primary);
 	position: relative;
 	cursor: default;
 }
@@ -86,11 +93,22 @@ button.active::after {
 	right: 0.8rem;
 	width: 25px;
 	height: 2px;
-	background-color: hsl(16, 100%, 30%);
+	background-color: var(--action-primary);
 }
 
 button.active:active {
 	transform: none;
+}
+
+.cta-btn {
+	background-color: var(--action-primary);
+	color: var(--action-light);
+	padding: 1rem 2rem;
+	border-radius: 30px;
+}
+
+.cta-btn:hover {
+	transform: scale(1.05);
 }
 
 #menu-navigation {
@@ -130,7 +148,6 @@ button.active:active {
 	font-size: clamp(3rem, 8vw + 1rem, 6rem);
 	font-weight: 900;
 	line-height: 1.1;
-	color: hsl(16, 100%, 20%);
 }
 
 .home-logo {
@@ -140,19 +157,8 @@ button.active:active {
 .home-description {
 	max-width: 45ch;
 	font-size: 1.2rem;
-	color: hsl(16, 100%, 25%);
+	color: var(--txt-secondary);
 	line-height: 1.6;
-}
-
-.cta-btn {
-	background-color: hsl(16, 100%, 20%);
-	color: hsl(16, 100%, 85%);
-	padding: 1rem 2rem;
-	border-radius: 30px;
-}
-
-.cta-btn:hover {
-	transform: scale(1.05);
 }
 
 .site-footer {
@@ -173,7 +179,7 @@ button.active:active {
 	flex-direction: column;
 	align-items: center;
 	gap: 0.2rem;
-	color: hsl(16, 100%, 25%);
+	color: var(--txt-primary);
 }
 
 .logo-small {
@@ -184,7 +190,7 @@ button.active:active {
 .page-title {
 	font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
 	text-transform: capitalize;
-	color: hsl(16, 100%, 25%);
+	color: var(--txt-primary);
 }
 
 .menu-page {
@@ -217,13 +223,11 @@ button.active:active {
 
 .menu-item h3 {
 	font-size: 1.2rem;
-	color: hsl(16, 100%, 20%);
 }
 
 .item-price {
 	font-size: 1rem;
 	font-weight: 700;
-	color: hsl(16, 100%, 30%);
 	white-space: nowrap;
 }
 
@@ -243,7 +247,7 @@ button.active:active {
 	transform: translateX(-90%);
 	width: 50%;
 	height: 1px;
-	background-color: hsl(16, 100%, 30%);
+	background-color: var(--action-primary);
 	opacity: 0.3;
 }
 
@@ -260,7 +264,6 @@ button.active:active {
 .about-txt-container p,
 .contact-container p {
 	line-height: 1.8;
-	color: hsl(16, 100%, 15%);
 	font-size: 1.1rem;
 }
 
@@ -269,19 +272,18 @@ blockquote {
 	font-style: italic;
 	font-size: 1.5rem;
 	padding: 1rem 2rem;
-	border-left: 2px solid hsl(16, 100%, 25%);
+	border-left: 2px solid var(--border-clr);
 	margin: 1rem 0;
-	color: hsl(16, 100%, 20%);
+	color: var(--txt-primary);
 }
 
 .contact-container h3 {
-	color: hsl(16, 100%, 15%);
 	font-size: 1.3rem;
 	line-height: 1.8;
 }
 
 .contact-form {
-	background-color: hsl(16, 100%, 86%);
+	background-color: var(--bg-secondary);
 	padding: 2.5rem;
 	border-radius: 12px;
 	width: 100%;
@@ -292,6 +294,7 @@ blockquote {
 	display: flex;
 	flex-direction: column;
 	overflow: visible;
+	box-shadow: var(--shadow-md);
 }
 
 .form-group,
@@ -308,27 +311,27 @@ input,
 select,
 textarea {
 	padding: 0.8rem;
-	border: 1px solid hsl(16, 100%, 75%);
+	border: 1px solid var(--border-clr);
 	border-radius: 8px;
-	background-color: hsl(16, 100%, 95%);
-	color: hsl(16, 100%, 20%);
+	background-color: var(--bg-primary);
+	color: var(--txt-secondary);
 }
 
 input:focus,
 textarea:focus {
 	outline: none;
-	border-color: hsl(16, 100%, 25%);
-	box-shadow: 0 0 5px hsla(16, 100%, 45%, 0.3);
+	border-color: var(--action-primary);
+	box-shadow: var(--shadow-sm);
 }
 
 input:invalid,
 textarea:invalid {
-	border-color: hsl(0, 100%, 65%);
+	border-color: var(--error);
 }
 
 input:user-invalid,
 textarea:user-invalid {
-	border: 2px solid hsl(0, 100%, 65%);
+	border: 2px solid var(--error);
 }
 
 textarea {
@@ -337,8 +340,8 @@ textarea {
 }
 
 .submit-btn {
-	background-color: hsl(16, 100%, 66%);
-	color: hsl(16, 100%, 95%);
+	background-color: var(--action-primary);
+	color: var(--action-light);
 }
 
 .submitted {
