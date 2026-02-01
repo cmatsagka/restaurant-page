@@ -295,25 +295,41 @@ blockquote {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 2rem;
+	padding-top: 2rem;
+}
+
+.contact-container {
+	padding-top: 0;
+	margin-top: 0;
 }
 
 .contact-container h3 {
 	font-size: 1.3rem;
-	line-height: 1.8;
+	line-height: 1;
+	margin-top: 0;
+	padding-top: 0;
 }
 
 .contact-form {
 	background-color: transparent;
 	box-shadow: none;
 	border-left: 2px solid var(--txt-primary);
-	padding: 1rem 0 1rem 3rem;
+	padding: 0 0 1rem 3rem;
+	margin: 0;
+	margin-top: -4px;
 	width: 100%;
 	max-width: 600px;
-	margin: 0;
 	gap: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	overflow: visible;
+}
+
+.contact-form .form-group:first-child label {
+	margin-top: 0;
+	padding-top: 0;
+	line-height: 1;
+	display: block;
 }
 
 .form-group,
@@ -387,6 +403,7 @@ textarea {
 		flex-direction: row;
 		justify-content: space-between;
 		gap: 4rem;
+		align-items: flex-start;
 	}
 
 	.contact-container {
@@ -397,6 +414,7 @@ textarea {
 		flex: 1.2;
 		margin: 0;
 		gap: 1.5rem;
-		padding: 3rem;
+		padding: 0 0 3rem 3rem;
+		margin-top: 2px;
 	}
 }
