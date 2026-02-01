@@ -129,6 +129,10 @@ button.active:active {
 	padding: 2rem;
 }
 
+.animate {
+	animation: FadeIn 0.2s ease-out forwards;
+}
+
 .home-page {
 	display: flex;
 	flex-direction: column;

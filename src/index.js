@@ -22,6 +22,11 @@ function setActiveButton(activeBtn) {
 export function updateContent(loadFunction, clickedBtn) {
 	content.innerHTML = '';
 	content.className = '';
+
+	content.classList.remove('animate');
+	content.offsetHeight;
+	content.classList.add('animate');
+
 	loadFunction();
 	if (clickedBtn) {
 		setActiveButton(clickedBtn);
