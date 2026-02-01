@@ -129,7 +129,7 @@ export function loadContact() {
 		form.classList.add('submitted');
 
 		form.replaceChildren(
-			el('h3', { textContent: 'Thank you!' }),
+			el('h2', { textContent: 'Thank you!' }),
 			el('p', { textContent: 'We have received your message.' }),
 			el('p', { textContent: 'We will get back to you soon.' })
 		);

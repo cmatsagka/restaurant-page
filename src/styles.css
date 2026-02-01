@@ -15,11 +15,11 @@
 	--border-clr: hsla(16, 40%, 12%, 0.1);
 	--shadow-sm: 0 2px 8px -2px hsla(16, 40%, 12%, 0.15);
 	--shadow-md: 0 12px 24px -4px hsla(16, 40%, 12%, 0.2);
-
-	font-family: 'Inter', sans-serif;
-	@supports (font-variation-settings: normal) {
-		font-family: 'Inter var', sans-serif;
-	}
+	--gradient-action: linear-gradient(
+		135deg,
+		var(--action-primary),
+		var(--action-hover)
+	);
 }
 
 * {
@@ -31,11 +31,14 @@
 body {
 	background-color: var(--bg-primary);
 	color: var(--txt-primary);
-	font-family: 'Inter', 'Segoe UI', sans-serif;
-	letter-spacing: -0.01;
+	letter-spacing: -0.01em;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	font-family: 'Inter', sans-serif;
+	@supports (font-variation-settings: normal) {
+		font-family: 'Inter var', sans-serif;
+	}
 }
 
 img {
@@ -71,11 +74,7 @@ button {
 }
 
 button:hover {
-	background: linear-gradient(
-		135deg,
-		var(--action-primary),
-		var(--action-hover)
-	);
+	background: var(--gradient-action);
 	color: var(--action-light);
 }
 
@@ -106,15 +105,10 @@ button.active:active {
 
 .cta-btn,
 .submit-btn {
-	background: linear-gradient(
-		135deg,
-		var(--action-primary),
-		var(--action-hover)
-	);
+	background: var(--gradient-action);
 	box-shadow: var(--shadow-md);
 	color: var(--action-light);
 	padding: 1rem 2rem;
-	border: none;
 }
 
 .cta-btn:hover {
@@ -151,7 +145,7 @@ button.active:active {
 	align-items: center;
 	flex: 1;
 	gap: 2rem;
-	margin-bottom: 10vh;
+	margin-bottom: 25vh;
 }
 
 .home-page h1 {
@@ -171,15 +165,6 @@ button.active:active {
 	line-height: 1.6;
 }
 
-.site-footer {
-	display: flex;
-	gap: 1.5rem;
-}
-
-.site-footer a:hover {
-	color: var(--action-hover);
-}
-
 .page-header {
 	display: flex;
 	flex-direction: column;
@@ -188,23 +173,25 @@ button.active:active {
 	margin-bottom: 3rem;
 }
 
+.page-title {
+	font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+	text-transform: capitalize;
+}
+
+.restaurant-name {
+	font-size: 1.2rem;
+	text-transform: lowercase;
+}
+
 .logo-name {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 0.2rem;
-	color: var(--txt-primary);
 }
 
 .logo-small {
 	height: 80px;
 	width: auto;
-}
-
-.page-title {
-	font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
-	text-transform: capitalize;
-	color: var(--txt-primary);
 }
 
 .menu-page {
@@ -213,35 +200,11 @@ button.active:active {
 	align-items: center;
 }
 
-.restaurant-name {
-	font-size: 1.2rem;
-	text-transform: lowercase;
-}
-
 .menu {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 1.5rem;
 	width: 100%;
-	margin-top: 0;
-}
-
-.menu-item-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-	gap: 1rem;
-	margin-bottom: 0.2rem;
-}
-
-.menu-item h3 {
-	font-size: 1.2rem;
-}
-
-.item-price {
-	font-size: 1rem;
-	font-weight: 700;
-	white-space: nowrap;
 }
 
 .menu-item {
@@ -250,6 +213,22 @@ button.active:active {
 	flex-direction: column;
 	gap: 0.5rem;
 	position: relative;
+}
+
+.menu-item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+}
+
+.menu-item h3 {
+	font-size: 1.2rem;
+}
+
+.item-price {
+	font-weight: 700;
+	white-space: nowrap;
 }
 
 .menu-item::after {
@@ -269,8 +248,6 @@ button.active:active {
 	display: flex;
 	flex-direction: column;
 	max-width: 65ch;
-	text-align: left;
-	margin-top: 0;
 	gap: 1rem;
 }
 
@@ -293,41 +270,27 @@ blockquote {
 .contact-wrapper {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 	gap: 2rem;
 	padding-top: 2rem;
-}
-
-.contact-container {
-	padding-top: 0;
-	margin-top: 0;
 }
 
 .contact-container h3 {
 	font-size: 1.3rem;
 	line-height: 1;
-	margin-top: 0;
-	padding-top: 0;
 }
 
 .contact-form {
-	background-color: transparent;
-	box-shadow: none;
 	border-left: 2px solid var(--txt-primary);
 	padding: 0 0 1rem 3rem;
-	margin: 0;
 	margin-top: -4px;
 	width: 100%;
 	max-width: 600px;
 	gap: 0.5rem;
 	display: flex;
 	flex-direction: column;
-	overflow: visible;
 }
 
 .contact-form .form-group:first-child label {
-	margin-top: 0;
-	padding-top: 0;
 	line-height: 1;
 	display: block;
 }
@@ -338,17 +301,13 @@ blockquote {
 .form-submit {
 	display: flex;
 	flex-direction: column;
-	gap: 0.6rem;
-	text-align: left;
 }
 
 input,
 select,
 textarea {
-	padding: 0.8rem;
 	border: none;
 	border-bottom: 1px solid var(--border-clr);
-	border-radius: 0;
 	background-color: transparent;
 	color: var(--txt-primary);
 	padding: 0.8rem 0;
@@ -359,7 +318,6 @@ input:focus,
 textarea:focus {
 	outline: none;
 	border-bottom: 1px solid var(--action-primary);
-	box-shadow: none;
 }
 
 input:invalid,
@@ -384,18 +342,44 @@ textarea {
 }
 
 .submitted {
-	display: flex;
-	flex-direction: column;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
-	padding: 0;
+	gap: 1.5rem;
+	padding: 4rem 2rem;
+	animation: FadeIn 0.6s ease-out;
+}
+
+.submitted h2 {
+	font-size: 2rem;
+	font-weight: 300;
 }
 
 .submitted p {
-	max-width: 30ch;
+	max-width: 35ch;
 	margin: 0 auto;
+	line-height: 1.6;
+	color: var(--txt-secondary);
+}
+
+@keyframes FadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.site-footer {
+	display: flex;
+	gap: 0rem;
+}
+
+.site-footer a:hover {
+	color: var(--action-hover);
 }
 
 @media (min-width: 850px) {
@@ -412,7 +396,6 @@ textarea {
 
 	.contact-form {
 		flex: 1.2;
-		margin: 0;
 		gap: 1.5rem;
 		padding: 0 0 3rem 3rem;
 		margin-top: 2px;
