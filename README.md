@@ -2,6 +2,8 @@ Zoumi Bistro - SPA Restaurant Page
 
 A high-performance, responsive Single Page Application (SPA) built for The Odin Project. This project moves away from traditional multi-page architecture, instead using vanilla JavaScript to dynamically manage the DOM.
 
+Live Demo: https://cmatsagka.github.io/restaurant-page/
+
 The Challenge
 
 The core requirement was to build a restaurant site where the entire content is generated via JavaScript. The goal was to master ES6 modules, Webpack bundling, and dynamic DOM manipulation without relying on multiple HTML files.
