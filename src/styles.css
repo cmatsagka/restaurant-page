@@ -1,9 +1,14 @@
 @import url('https://rsms.me/inter/inter.css');
 
 :root {
-	--clr-primary: ;
-	--clr-secondary: ;
-	--clr-accent: ;
+	--bg-primary: hsl(16, 30%, 96%);
+	--bg-secondary: hsl(16, 25%, 92%);
+
+	--txt-primary: hsl(16, 40%, 12%);
+	--txt-secondary: hsl(16, 15%, 45%);
+
+	--action-primary: hsl(16, 75%, 45%);
+	--action-hover: hsl(16, 85%, 35%);
 
 	font-family: 'Inter', sans-serif;
 	@supports (font-variation-settings: normal) {
