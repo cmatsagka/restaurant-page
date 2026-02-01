@@ -49,18 +49,4 @@ export function loadAbout() {
 	);
 
 	content.appendChild(storyContainer);
-
-	const footer = el(
-		'footer',
-		{ className: 'site-footer' },
-		el('p', {
-			textContent: `© ${new Date().getFullYear()} Zoumi Bistro`,
-		}),
-		el('a', {
-			href: 'https://github.com/cmatsagka',
-			textContent: 'Built by Chrysanthi M.',
-		})
-	);
-
-	content.appendChild(footer);
 }

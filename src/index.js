@@ -1,4 +1,6 @@
 import './styles.css';
+import { initFooter } from './footer.js';
+
 import { loadPage } from './initial-page-load.js';
 import { loadMenu } from './menu.js';
 import { loadAbout } from './about.js';
@@ -25,6 +27,8 @@ export function updateContent(loadFunction, clickedBtn) {
 		setActiveButton(clickedBtn);
 	}
 }
+
+initFooter();
 
 homeBtn.addEventListener('click', () => {
 	updateContent(loadPage, homeBtn);

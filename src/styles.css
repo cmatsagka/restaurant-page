@@ -375,17 +375,22 @@ textarea {
 }
 
 .site-footer {
+	width: 100%;
+	margin-top: auto;
+}
+
+.footer-container {
 	display: flex;
 	justify-content: center;
 	gap: 2rem;
-	padding-top: 2rem;
-	margin-top: auto;
+	padding: 1.5rem 1rem;
 	border-top: 1px solid var(--border-clr);
 	font-size: 0.9rem;
+	text-align: center;
 	color: var(--txt-secondary);
 }
 
-.site-footer a:hover {
+.footer-container a:hover {
 	color: var(--action-hover);
 }
 
