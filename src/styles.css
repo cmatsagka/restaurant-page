@@ -394,6 +394,35 @@ textarea {
 	color: var(--action-hover);
 }
 
+@media (max-width: 600px) {
+	#menu-navigation {
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	#menu-navigation button {
+		flex: 1 1 40%;
+		padding: 0.8rem;
+	}
+
+	button.active::after {
+		right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 5px;
+	}
+
+	#menu-navigation button.active:hover {
+		background: none;
+		color: var(--action-primary);
+		cursor: default;
+	}
+
+	#menu-navigation button.active:active {
+		transform: none;
+	}
+}
+
 @media (min-width: 850px) {
 	.contact-wrapper {
 		flex-direction: row;
