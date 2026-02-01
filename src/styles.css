@@ -13,7 +13,7 @@
 
 	--error: hsl(0, 70%, 50%);
 	--border-clr: hsla(16, 40%, 12%, 0.1);
-	--shadow-sm: 0 2px 8px -2px hsla(16, 40%, 12%, 0.4);
+	--shadow-sm: 0 2px 8px -2px hsla(16, 40%, 12%, 0.15);
 	--shadow-md: 0 12px 24px -4px hsla(16, 40%, 12%, 0.2);
 
 	font-family: 'Inter', sans-serif;
@@ -166,6 +166,10 @@ button.active:active {
 	gap: 1.5rem;
 }
 
+.site-footer a:hover {
+	color: var(--action-hover);
+}
+
 .page-header {
 	display: flex;
 	flex-direction: column;
@@ -202,7 +206,6 @@ button.active:active {
 .restaurant-name {
 	font-size: 1.2rem;
 	text-transform: lowercase;
-	letter-spacing: 2px;
 }
 
 .menu {
@@ -268,13 +271,13 @@ button.active:active {
 }
 
 blockquote {
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-style: italic;
-	font-size: 1.5rem;
-	padding: 1rem 2rem;
-	border-left: 2px solid var(--border-clr);
-	margin: 1rem 0;
-	color: var(--txt-primary);
+	font-size: 2.2rem;
+	font-weight: 300;
+	line-height: 1.2;
+	border-left: 4px solid var(--action-primary);
+	padding: 1rem 3rem;
+	margin: 3rem 0;
+	transform: translateX(-20px);
 }
 
 .contact-container h3 {
