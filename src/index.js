@@ -14,8 +14,8 @@ const aboutBtn = document.querySelector('#about-btn');
 const contactBtn = document.querySelector('#contact-btn');
 
 function setActiveButton(activeBtn) {
-	const buttons = document.querySelectorAll('button');
-	buttons.forEach((btn) => btn.classList.remove('active'));
+	const navButtons = document.querySelectorAll('#menu-navigation button');
+	navButtons.forEach((btn) => btn.classList.remove('active'));
 	activeBtn.classList.add('active');
 }
 
