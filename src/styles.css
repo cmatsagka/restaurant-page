@@ -374,3 +374,19 @@ textarea {
 	max-width: 30ch;
 	margin: 0 auto;
 }
+
+@media (min-width: 850px) {
+	.contact-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.contact-container {
+		flex: 1;
+	}
+
+	.contact-form {
+		flex: 1.2;
+		margin: 0;
+	}
+}
