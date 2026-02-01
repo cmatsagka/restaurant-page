@@ -46,5 +46,4 @@ contactBtn.addEventListener('click', () => {
 	updateContent(loadContact, contactBtn);
 });
 
-loadPage();
-setActiveButton(homeBtn);
+updateContent(loadPage, homeBtn);
