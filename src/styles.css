@@ -155,7 +155,7 @@ button.active:active {
 }
 
 img.home-logo {
-	width: clamp(300px, 35vw, 650px);
+	width: clamp(250px, 30vw, 600px);
 }
 
 .home-description {
@@ -376,7 +376,13 @@ textarea {
 
 .site-footer {
 	display: flex;
-	gap: 1.5rem;
+	justify-content: center;
+	gap: 2rem;
+	padding-top: 2rem;
+	margin-top: auto;
+	border-top: 1px solid var(--border-clr);
+	font-size: 0.9rem;
+	color: var(--txt-secondary);
 }
 
 .site-footer a:hover {
