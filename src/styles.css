@@ -154,8 +154,8 @@ button.active:active {
 	line-height: 1.1;
 }
 
-.home-logo {
-	width: clamp(150px, 20vw, 300px);
+img.home-logo {
+	width: clamp(300px, 35vw, 650px);
 }
 
 .home-description {
@@ -187,6 +187,7 @@ button.active:active {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 0.5rem;
 }
 
 .logo-small {
@@ -375,7 +376,7 @@ textarea {
 
 .site-footer {
 	display: flex;
-	gap: 0rem;
+	gap: 1.5rem;
 }
 
 .site-footer a:hover {

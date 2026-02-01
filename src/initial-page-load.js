@@ -1,4 +1,5 @@
-import restaurantLogo from './assets/restaurant.png';
+import zoumiLogo from './assets/zoumiLogo.svg';
+
 import { el } from './domUtils.js';
 import { updateContent } from './index.js';
 import { loadMenu } from './menu.js';
@@ -18,7 +19,7 @@ export function loadPage() {
 			className: 'home-description',
 		}),
 		el('img', {
-			src: restaurantLogo,
+			src: zoumiLogo,
 			alt: 'Zoumi Bistro logo',
 			className: 'home-logo',
 		}),

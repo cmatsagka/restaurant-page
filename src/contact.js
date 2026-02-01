@@ -1,4 +1,4 @@
-import restaurantLogo from './assets/restaurant.png';
+import zoumiLogo from './assets/zoumiLogo.svg';
 import { el } from './domUtils.js';
 
 export function loadContact() {
@@ -13,7 +13,7 @@ export function loadContact() {
 			className: 'restaurant-name',
 		}),
 		el('img', {
-			src: restaurantLogo,
+			src: zoumiLogo,
 			alt: 'Zoumi Bistro logo',
 			className: 'logo-small',
 		})
