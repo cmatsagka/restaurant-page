@@ -56,8 +56,6 @@ export function loadContact() {
 		return section;
 	}
 
-	content.appendChild(infoContainer);
-
 	function createFormFields(
 		fieldName,
 		fieldType,
@@ -137,5 +135,12 @@ export function loadContact() {
 		);
 	});
 
-	content.appendChild(form);
+	const contactWrapper = el(
+		'div',
+		{ className: 'contact-wrapper' },
+		infoContainer,
+		form
+	);
+
+	content.appendChild(contactWrapper);
 }
