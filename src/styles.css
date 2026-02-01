@@ -294,7 +294,7 @@ blockquote {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 4rem;
+	gap: 2rem;
 	margin-top: 2rem;
 }
 
@@ -304,18 +304,19 @@ blockquote {
 }
 
 .contact-form {
-	background-color: var(--bg-secondary);
-	padding: 2.5rem;
-	border-radius: 12px;
+	background-color: var(--action-light);
+	box-shadow: var(--shadow-md);
+	border: 1px solid var(--border-clr);
+	padding: 2rem;
+	border-radius: 4px;
 	width: 100%;
 	max-width: 600px;
 	min-height: 550px;
-	margin: 1.5rem auto;
-	gap: 1rem;
+	margin: 0 auto;
+	gap: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	overflow: visible;
-	box-shadow: var(--shadow-md);
 }
 
 .form-group,
@@ -388,5 +389,6 @@ textarea {
 	.contact-form {
 		flex: 1.2;
 		margin: 0;
+		gap: 1.5rem;
 	}
 }
