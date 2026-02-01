@@ -71,7 +71,11 @@ button {
 }
 
 button:hover {
-	background-color: var(--action-hover);
+	background: linear-gradient(
+		135deg,
+		var(--action-primary),
+		var(--action-hover)
+	);
 	color: var(--action-light);
 }
 
@@ -100,11 +104,17 @@ button.active:active {
 	transform: none;
 }
 
-.cta-btn {
-	background-color: var(--action-primary);
+.cta-btn,
+.submit-btn {
+	background: linear-gradient(
+		135deg,
+		var(--action-primary),
+		var(--action-hover)
+	);
+	box-shadow: var(--shadow-md);
 	color: var(--action-light);
 	padding: 1rem 2rem;
-	border-radius: 30px;
+	border: none;
 }
 
 .cta-btn:hover {
@@ -340,11 +350,6 @@ textarea:user-invalid {
 textarea {
 	resize: vertical;
 	min-height: 120px;
-}
-
-.submit-btn {
-	background-color: var(--action-primary);
-	color: var(--action-light);
 }
 
 .submitted {
