@@ -59,3 +59,9 @@ Start the development server:
 ```bash
 npm start
 ```
+
+---
+
+## 🎨 Attribution
+
+Logo & Branding: Custom logo designed and created by cmatsagka.
